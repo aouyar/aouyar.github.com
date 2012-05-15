@@ -29,7 +29,7 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://{{ page.user }}.github.com">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/{{ page.user }}/">View on GitHub</a>
 
           <h1 id="project_title">{{ page.user}} - {{page.username}}</h1>
           <h2 id="project_tagline">{{ page.description }}</h2>
@@ -49,8 +49,10 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-      	<p>Last Update: {{site.time}}</p>
-        <p class="copyright">Page maintained by <a href="https://{{ page.user}}.github.com">{{ page.user }}</a></p>
+        <p class="copyright">Page maintained 
+        	by <a href="http://{{ page.user}}.github.com">{{ page.user }}</a>
+        	@ <a href="https://github.com/{{ page.user}}/">GitHub</a></p>
+        <p>Last Update: {{site.time}}</p>
       </footer>
     </div>
 

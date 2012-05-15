@@ -33,9 +33,9 @@ Projects
 --------
 
 {% for project in page.projects %}
-* [{{ project.name }}] (http://{{page.user}}.github.com/{{project.name}}/)
-  @ [GitHub] (https://github.com/{{page.user}}/{project.name}/) - {{project.shortdesc}}
-  <br>{{project.longdesc}}
+* [{{ project.name }}] (http://{{ page.user }}.github.com/{{ project.name }}/)
+  @ [GitHub] (https://github.com/{{ page.user }}/{{ project.name }}/) - {{ project.shortdesc }}
+  <br>{{ project.longdesc }}
 {% endfor %}
 
 
