@@ -14,10 +14,12 @@ projects:
                 PostgreSQL Database, Varnish Cache, CPU Utilization, 
                 Memory Utilization, Disk Usage, Disk I/O, Network Interfaces, 
                 Network Connections, Processes and Threads, etc.
+      gh-page: true
     - name: pybackup
       shortdesc: Python Module for implementing backup scripts.
       longdesc: Being developed as an alternative to custom shell scripts
                 that improves on error checking and reporting.
+      gh-page: true
     - name: MAC-Telnet
       shortdesc: Telnet / SSH using MAC Address (Client and Server)
       longdesc: Based on the original work of 
@@ -26,6 +28,7 @@ projects:
                 connecting to Microtik RouterOS routers and Linux machines via 
                 MAC address. Added MAC SSH client and server functionality for 
                 tunneling SSH protocol instead of implementing shell interface directly.
+      gh-page: false
 	
 ---
 
@@ -33,9 +36,15 @@ Projects
 --------
 
 {% for project in page.projects %}
+{% if project.gh-page %}
 * [{{ project.name }}] (http://{{ page.user }}.github.com/{{ project.name }}/)
   @ [GitHub] (https://github.com/{{ page.user }}/{{ project.name }}/) - {{ project.shortdesc }}
   <br>{{ project.longdesc }}
+{% else %}
+* {{ project.name }}
+  @ [GitHub] (https://github.com/{{ page.user }}/{{ project.name }}/) - {{ project.shortdesc }}
+  <br>{{ project.longdesc }}
+{% endif %}
 {% endfor %}
 
 
