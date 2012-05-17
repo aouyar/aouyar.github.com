@@ -1,0 +1,15 @@
+/* import core styles | Basis-Stylesheets einbinden */
+@import url(../yaml/core/base.css);
+
+/* import screen layout | Screen-Layout einbinden */
+@import url(../yaml/navigation/vlist.css);
+@import url(../yaml/navigation/hlist.css);
+@import url(../yaml/forms/gray-theme.css);
+@import url(../yaml/add-ons/accessible-tabs/tabs.css);
+@import url(../yaml/add-ons/microformats/microformats.css);
+
+@import url(../yaml/screen/typography.css);
+@import url(screen.css);
+
+/* import print layout | Druck-Layout einbinden */
+@import url(../yaml/print/print.css);

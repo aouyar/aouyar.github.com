@@ -5,10 +5,11 @@
     <meta charset='utf-8' />
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="{{ page.user }} - {{page.username }} - {{ page.description }}" />
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{{ site.user }} - {{site.username }} - {{ page.description }}" />
     <meta name="keywords" content="{{ page.keywords }}">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <title>{{ page.user}} @ GitHub - {{ page.username }}</title>
+    <title>{{ site.user}} @ GitHub - {{ site.username }}</title>
     
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -29,9 +30,9 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/{{ page.user }}/">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/{{ site.user }}/">View on GitHub</a>
 
-          <h1 id="project_title">{{ page.user}} - {{page.username}}</h1>
+          <h1 id="project_title">{{ site.user}} - {{site.username}}</h1>
           <h2 id="project_tagline">{{ page.description }}</h2>
 
         </header>
@@ -50,8 +51,8 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">Page maintained 
-        	by <a href="http://{{ page.user}}.github.com">{{ page.user }}</a>
-        	@ <a href="https://github.com/{{ page.user}}/">GitHub</a></p>
+        	by <a href="http://{{ site.user}}.github.com">{{ site.user }}</a>
+        	@ <a href="https://github.com/{{ site.user}}/">GitHub</a></p>
         <p>Last Update: {{site.time}}</p>
       </footer>
     </div>

@@ -1,8 +1,6 @@
 ---
-layout: user
+layout: profile
 description: Playground for Free Software Projects
-user: aouyar
-username: Ali Onur Uyar
 keywords: Ali Onur Uyar, GitHub, Free Software, Collaboration
 
 projects:

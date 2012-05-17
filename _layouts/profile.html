@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  	
+  	<!-- JavaScript Detection -->
+	<script>document.documentElement.className += " js";</script>
+  	
+  	<!-- Mobile viewport optimisation -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	
+    <meta charset='utf-8' />
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{{ site.user }} - {{site.username }} - {{ page.description }}" />
+    <meta name="keywords" content="{{ page.keywords }}">
+    
+    <title>{{ site.user}} @ GitHub - {{ site.username }}</title>
+    
+    <link href="./css/central.css" rel="stylesheet" type="text/css"/>
+    <link href="./js/snippet/snippet.css" rel="stylesheet" type="text/css"/>
+    
+    <!--[if lte IE 7]>
+	  <link href="./yaml/core/iehacks.min.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23944587-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+  </head>
+
+  <body id="yaml-top" class="doc">
+  	<!-- skip link navigation -->
+	<ul class="ym-skiplinks">
+	  <li><a class="ym-skip" href="#level2">Skip to navigation (Press Enter)</a></li>
+	  <li><a class="ym-skip" href="#overview">Skip to main content (Press Enter)</a></li>
+	</ul>
+	
+	<div id="intro" role="contentinfo">
+	  <a href="https://github.com/{{ site.user }}">{{ site.user}} @ GitHub</a>
+    </div>
+
+    <header role="banner">
+      <div class="ym-wrapper">
+        <div class="ym-wbox">
+            <h2>{{ site.username }}</h2>
+            <p>{{ page.description }}</p>
+        </div>
+      </div>
+    </header>
+    
+    <!-- begin: main navigation #nav -->
+    <nav id="level2"  role="navigation">
+      <div class="ym-wrapper">
+        <div class="ym-wbox">
+          <div class="ym-hlist">
+            <ul>
+              <li class="active"><a href="#projects">Projects</a>
+              <li class="active"><a href="#contact">Contact</a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="main" class="ym-clearfix" role="main">
+	  <div class="ym-wrapper">
+		<div class="ym-wbox">
+			{{ content }}
+		</div>
+	  </div>
+	</div>	
+
+
+	<footer role="contentinfo">
+      <div class="ym-wrapper">
+        <div class="ym-wbox">
+          <div class="ym-grid linearize-level-2">
+          	<div class="ym-g66 ym-gl">
+			  <div class="ym-gbox-left">
+		        <p>Page maintained 
+		          by <a href="http://{{ site.user}}.github.com">{{ site.user }}</a>
+		          @ <a href="https://github.com/{{ site.user}}/">GitHub</a><br>
+		          Last Update: {{site.time}}
+		          </p>
+		      </div>
+		    </div>
+		    <div class="ym-g33 ym-gr">
+			  <div class="ym-gbox-right">
+	            <p>Layout based on <a href="http://www.yaml.de">YAML</a></p>
+	          </div>
+		    </div>
+	      </div>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- full skip link functionality in webkit browsers -->
+    <script src="./yaml/core/js/yaml-focusfix.js"></script>
+    
+	<!-- jQuery & Plugins -->
+	<script src="./lib/jquery-1.7.1.min.js"></script>
+	<script src="./js/snippet/jquery.snippet.js"></script>
+	<script src="./js/jquery.gridbuilder.js"></script>
+	<script src="./yaml/add-ons/accessible-tabs/jquery.tabs.js"></script>
+	<script src="./yaml/add-ons/syncheight/jquery.syncheight.js"></script>
+	<script src="./js/domscript.js"></script>
+
+  </body>
+
+</html>
