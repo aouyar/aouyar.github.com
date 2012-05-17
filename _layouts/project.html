@@ -7,10 +7,10 @@
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="author" content="{{ site.author }}">
-    <meta name="description" content="{{ site.user }} - {{site.username }} - {{ page.description }}" />
-    <meta name="keywords" content="{{ page.keywords }}">    
-    <title>{{ site.user}} @ GitHub - {{ site.username }}</title>
-  	
+    <meta name="description" content="{{ site.user }} - {{site.username }} - {{ page.prjname }} - {{ page.description }}" />
+    <meta name="keywords" content="{{ page.keywords }}">
+    <title>{{ page.prjname}} @ GitHub by {{ site.username }}</title>
+    
 {% include css.inc %}
     
   </head>
@@ -22,15 +22,28 @@
 	  <li><a class="ym-skip" href="#overview">Skip to main content (Press Enter)</a></li>
 	</ul>
 	
-	<div id="intro" role="contentinfo">
-	  <a href="https://github.com/{{ site.user }}">{{ site.user}} @ GitHub</a>
-    </div>
+	<div id="intro-2" role="contentinfo">
+	  <div class="ym-grid linearize-level-2">
+	  	<div class="ym-g50 ym-gl">
+	  	  <div class="ym-gbox">
+	  	  	<div class="ym-gbox-left">
+	  	    	<a href="https://github.com/{{ site.user }}">{{ site.user }} @ GitHub</a>
+	  	    </div>
+	  	  </div>
+	  	</div>
+        <div class="ym-g50 ym-gr">
+          <div class="ym-gbox-right">
+          	<a href="https://github.com/{{ page.prjname }}">{{ page.prjname }} @ GitHub</a>
+          </div>
+       </div>
+     </div> 
+   </div>
 
     <header role="banner">
       <div class="ym-wrapper">
         <div class="ym-wbox">
-            <h2>{{ site.username }}</h2>
-            <p>{{ page.description }}</p>
+            <h2>{{ page.prjname }}</h2>
+            <p>{{ page.prjdesc }}</p>
         </div>
       </div>
     </header>
@@ -41,8 +54,13 @@
         <div class="ym-wbox">
           <div class="ym-hlist">
             <ul>
-              <li class="active"><a href="#projects">Projects</a>
-              <li><a href="#contact">Contact</a>
+            	{% for tab_name in page.hnav %}
+            		{% if forloop.index == 1 %}
+              			<li class="active"><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              		{% else %}
+              			<li><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              		{% endif %}
+              	{% endfor %}
             </ul>
           </div>
         </div>
@@ -64,7 +82,7 @@
           <div class="ym-grid linearize-level-2">
           	<div class="ym-g66 ym-gl">
 			  <div class="ym-gbox-left">
-		        <p>Page maintained 
+		        <p>{{ page.prjname }} maintained 
 		          by <a href="http://{{ site.user}}.github.com">{{ site.user }}</a>
 		          @ <a href="https://github.com/{{ site.user}}/">GitHub</a><br>
 		          Last Update: {{site.time}}
@@ -80,7 +98,7 @@
         </div>
       </div>
     </footer>
-    
+  
 {% include js.inc %}
 
   </body>

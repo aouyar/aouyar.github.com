@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 			self.installStickyMenu();
 			self.installTabs();
-			self.installSyntaxHighlighting();
+			// self.installSyntaxHighlighting();
 			self.installGrid();
 			self.installFormSwitcher();
 		},
