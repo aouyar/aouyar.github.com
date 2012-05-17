@@ -2,8 +2,6 @@
 baseptr: ../..
 layout: project
 description: Python Module for implementing backup scripts.
-user: aouyar
-username: Ali Onur Uyar
 keywords: python, backup, script, mysql, postgresql, archive, tar
 prjname: pybackup
 prjdesc: Python Module for implementing backup scripts
@@ -138,7 +136,4 @@ Help for Backup Methods:
 License
 -------
 
-_pybackup_ is copyrighted free software made available under the terms of the 
-_GPL License Version 3_ or later.
-
-See the file COPYING that acompanies the code for full licensing information.
+{% include license_gpl.inc %}

@@ -1,7 +1,7 @@
 ---
 baseptr: .
 layout: profile
-description: Playground for Free Software Projects
+description: Playground for Free Software Projects.
 keywords: Ali Onur Uyar, GitHub, Free Software, Collaboration
 
 projects:
@@ -32,7 +32,6 @@ projects:
                 no IP address. Facilitates initial provisioning of servers and 
                 embedded systems and might save the day if the network 
                 configuration gets messed up.
-                
       prj-page: false
 	
 ---
@@ -42,7 +41,7 @@ Projects
 
 {% for project in page.projects %}
 {% if project.prj-page %}
-* [{{ project.name }}] (http://{{ site.user }}.github.com/{{ project.name }}/)
+* [{{ project.name }}] (./prj/{{ project.name }}/)
   @ [GitHub] (https://github.com/{{ site.user }}/{{ project.name }}/) - {{ project.shortdesc }}
   <br>{{ project.longdesc }}
 {% else %}
