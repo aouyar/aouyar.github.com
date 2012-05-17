@@ -42,12 +42,12 @@ Projects
 
 {% for project in page.projects %}
 {% if project.prj-page %}
-* [{{ project.name }}] (http://{{ page.user }}.github.com/{{ project.name }}/)
-  @ [GitHub] (https://github.com/{{ page.user }}/{{ project.name }}/) - {{ project.shortdesc }}
+* [{{ project.name }}] (http://{{ site.user }}.github.com/{{ project.name }}/)
+  @ [GitHub] (https://github.com/{{ site.user }}/{{ project.name }}/) - {{ project.shortdesc }}
   <br>{{ project.longdesc }}
 {% else %}
 * {{ project.name }}
-  @ [GitHub] (https://github.com/{{ page.user }}/{{ project.name }}/) - {{ project.shortdesc }}
+  @ [GitHub] (https://github.com/{{ site.user }}/{{ project.name }}/) - {{ project.shortdesc }}
   <br>{{ project.longdesc }}
 {% endif %}
 {% endfor %}
