@@ -2,8 +2,7 @@
 baseptr: ../../..
 layout: munin_plugin
 description: PyMunin Munin Multigraph Monitoring Plugin for Apache in Python.
-             
-keywords: PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, Apache
+keywords: PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, Apache, Web Server
 prjname: PyMunin
 prjdesc: Python Module for developing Munin Multigraph Monitoring Plugins
 munin_plugin_name: apachestats
