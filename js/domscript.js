@@ -95,7 +95,8 @@ $(document).ready(function() {
 
 				if ($('body').hasClass('doc') === true) {
 
-					var stateObj = { page: "index" };
+					// var stateObj = { page: window.location };
+					// alert(window.location)
 
 					// jump to a named anchor ...
 					$('#level2 a').bind('click', function(event){
@@ -120,7 +121,8 @@ $(document).ready(function() {
 							$(document).scrollTop(pos-2*nHeight);
 						}
 						// update URL id fragment
-						history.pushState(stateObj, "docs", "index.html"+id);
+						// history.pushState(stateObj, "docs", id);
+						window.location = id
 					});
 				}
 			}
