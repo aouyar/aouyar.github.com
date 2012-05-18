@@ -5,9 +5,11 @@ description: Python Module for implementing backup scripts.
 keywords: python, backup, script, mysql, postgresql, archive, tar
 prjname: pybackup
 prjdesc: Python Module for implementing backup scripts
+prjpypi: false
 
 hnav:
     - About
+    - Download
     - Usage
     - License
 	
@@ -28,6 +30,14 @@ following plugins have been implemented for the time being:
 * Rsync: Replication of directory hierarchies using rsync.
 
 *WARNING*: This is still alpha software.
+
+
+
+Download
+--------
+
+{% include download.inc %}
+
 
 
 Usage

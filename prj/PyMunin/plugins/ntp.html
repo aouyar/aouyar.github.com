@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PyMunin - NTP Multigraph Munin Plugins</title>
+  <meta charset='utf-8'>
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="description" content="PyMunin Munin Multigraph Monitoring Plugin for NTP in Python.">
+  <meta name="keywords" content="PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, NTP">
+  <link href="../style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23944587-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  
+  <div id="container">
+
+    <h1><a href="../index.html">PyMunin</a>
+      <span class="small">NTP Plugins</span></h1>
+
+    <div class="description">
+	    PyMunin Multigraph Munin Plugins for NTP Time Sychronization.
+    </div>
+
+    <h2>NTP Peer Plugin - ntpstats</h2>
+    <p>The multigraph plugin implements the following graphs for monitoring 
+    time synchronization status relative to active synchronization peer:
+    <ul>
+      <li>ntp_peer_stratum
+      <li>ntp_peer_stats
+    </ul>
+    <p>The plugin permits monitoring the stratum of the active peer and the
+    estimated offset, delay and jitter.
+
+    <h2>NTP Multiple Remote Hosts Plugin - ntphostoffsets</h2>
+    <p>The multigraph plugin implements the following graphs for comparing the 
+    synchronization status of multiple remote hosts:
+    <ul>
+      <li>ntp_host_stratums
+      <li>ntp_host_offsets
+      <li>ntp_host_delays
+    </ul>
+    <p>
+    The list of remote hosts to be monitored is passed in the <i>ntphosts</i> 
+    environment variable.
+    
+    <h2>NTP Remote Host Plugin - ntphostoffset_</h2>
+    <p>The multigraph plugin implements the following graphs for monitoring the 
+    synchronization status of a single remote host:
+    <ul>
+      <li>ntp_host_stratum_
+      <li>ntp_host_stat_
+    </ul>
+    The plugin is a <i>wild card</i> and the name of the plugin must be prefixed
+    wuth the <i>IP</i> of the host to be monitored, when linking the plugin 
+    script to the <i>Munin Plugins Directory</i> (<i>/etc/munin/plugins</i>).
+    
+    <h2>Sample Graphs</h2>
+    <p>
+    <table summary="Sample Graphs">
+      <tr valign=top>
+        <td><img src="./img/ntp_peer_stratum-day.png" alt="NTP Peer Stratum"></td>
+        <td><img src="./img/ntp_peer_stats-day.png" alt="NTP Peer Stats"></td>
+      </tr>
+    </table>
+    
+    <h2>Environment Variables</h2>
+    <p>
+    <table class="TableAttrs" summary="Enviroment variables used by the plugin.">
+    	<tr>
+    		<th>Variable</th>
+    		<th>Description</th>
+    	</tr>
+    	<tr>
+    		<td>ntphosts</td>
+    		<td>Used only by <i>ntphostoffsets</i> plugin, is a required 
+    			configuration for this plugin. Must contain a comma separated 
+    			list of IP addresses of hosts to be monitored.
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>include_graphs</td>
+    		<td>Comma separated list of enabled graphs.<br>
+    			(All graphs enabled by default.)
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>exclude_graphs</td>
+    		<td>Comma separated list of disabled graphs.</td>
+    	</tr>
+    </table>
+
+  </div>
+  
+</body>
+</html>

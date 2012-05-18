@@ -14,12 +14,12 @@ projects:
                 NTP, PostgreSQL Database, Varnish Cache, CPU Utilization, 
                 Memory Utilization, Disk Usage, Disk I/O, Network Interfaces, 
                 Network Connections, Processes and Threads, etc.
-      prj-page: true
+      prjpage: true
     - name: pybackup
       shortdesc: Python Module for implementing backup scripts.
       longdesc: Being developed as an alternative to custom shell scripts
                 that improves on error checking and reporting.
-      prj-page: true
+      prjpage: true
     - name: MAC-Telnet
       shortdesc: Telnet / SSH using MAC Address (Client and Server)
       longdesc: Based on the original work of 
@@ -32,7 +32,7 @@ projects:
                 no IP address. Facilitates initial provisioning of servers and 
                 embedded systems and might save the day if the network 
                 configuration gets messed up.
-      prj-page: false
+      prjpage: false
 	
 ---
 
@@ -40,7 +40,7 @@ Projects
 --------
 
 {% for project in page.projects %}
-{% if project.prj-page %}
+{% if project.prjpage %}
 * [{{ project.name }}] (./prj/{{ project.name }}/)
   @ [GitHub] (https://github.com/{{ site.user }}/{{ project.name }}/) - {{ project.shortdesc }}
   <br>{{ project.longdesc }}

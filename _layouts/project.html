@@ -27,13 +27,15 @@
 	  	<div class="ym-g50 ym-gl">
 	  	  <div class="ym-gbox">
 	  	  	<div class="ym-gbox-left">
-	  	    	<a href="https://github.com/{{ site.user }}">{{ site.user }} @ GitHub</a>
+	  	  		<a href="../../">{{ site.user }}</a>
+	  	  		@ <a href="https://github.com/{{ site.user }}">GitHub</a>
 	  	    </div>
 	  	  </div>
 	  	</div>
         <div class="ym-g50 ym-gr">
           <div class="ym-gbox-right">
-          	<a href="https://github.com/{{ page.prjname }}">{{ page.prjname }} @ GitHub</a>
+          	<a href="{{ page.baseptr }}/prj/{{ page.prjname }}">{{ page.prjname }}</a> 
+          	@ <a href="https://github.com/{{ page.prjname }}">GitHub</a>
           </div>
        </div>
      </div> 
@@ -83,7 +85,7 @@
           	<div class="ym-g66 ym-gl">
 			  <div class="ym-gbox-left">
 		        <p>{{ page.prjname }} maintained 
-		          by <a href="../../">{{ site.user }}</a>
+		          by <a href="{{ page.baseptr }}/">{{ site.user }}</a>
 		          @ <a href="https://github.com/{{ site.user}}/">GitHub</a><br>
 		          Last Update: {{site.time}}
 		          </p>

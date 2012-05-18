@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PyMunin - System Resources (Load, CPU, Memory, Processes, Interrupts, etc.) 
+    Multigraph Munin Plugin</title>
+  <meta charset='utf-8'>
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="description" content="PyMunin Munin Multigraph Monitoring Plugin for System Resources (Load, CPU, Memory, Processes, Interrupts, etc.) in Python.">
+  <meta name="keywords" content="PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, System, CPU, Processor, Memory, Processes, Interrupts">
+  <link href="../style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23944587-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  
+  <div id="container">
+
+    <h1><a href="../index.html">PyMunin</a>
+      <span class="small">System Resources Plugin</span></h1>
+
+    <div class="description">
+	    <p>PyMunin Multigraph Munin Plugin for monitoring System Resources.
+	    <p>Load Average, CPU and Memory Utilization, Processes, Forks, Interrupts,
+	      Context Switches, Paging and Swapping etc.
+    </div>
+
+    <h2>System Resources Plugin - sysstats</h2>
+    <p>The multigraph plugin implements the following graphs:
+    <ul>
+      <li>sys_loadavg
+      <li>sys_cpu_util
+      <li>sys_memory_util
+      <li>sys_memory_avail
+      <li>sys_processes
+      <li>sys_forks
+      <li>sys_intr_ctxt
+      <li>sys_vm_paging
+      <li>sys_vm_swapping
+    </ul>
+    
+    <h2>Sample Graphs</h2>
+    <p>
+    <table summary="Sample Graphs">
+      <tr valign=top>
+        <td><img src="./img/sys_cpu_util-day.png" alt="CPU Utilization"></td>
+        <td><img src="./img/sys_loadavg-day.png" alt="Load Average"></td>
+      </tr>
+      <tr valign=top>
+        <td><img src="./img/sys_mem_util-day.png" alt="Memory Utilization"></td>
+        <td><img src="./img/sys_mem_avail-day.png" alt="Memory Active/Inactive"></td>
+      </tr>
+      <tr valign=top>
+        <td><img src="./img/sys_vm_paging-day.png" alt="VM Paging"></td>
+        <td><img src="./img/sys_vm_swapping-day.png" alt="VM Swapping"></td>
+      </tr>
+    </table>
+
+	<h2>Environment Variables</h2>
+    <p>
+    <table class="TableAttrs" summary="Enviroment variables used by the plugin.">
+    	<tr>
+    		<th>Variable</th>
+    		<th>Description</th>
+    	</tr>
+    	<tr>
+    		<td>include_graphs</td>
+    		<td>Comma separated list of enabled graphs.<br>
+    			(All graphs enabled by default.)
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>exclude_graphs</td>
+    		<td>Comma separated list of disabled graphs.</td>
+    	</tr>
+    </table>
+
+  </div>
+  
+</body>
+</html>

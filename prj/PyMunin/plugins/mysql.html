@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PyMunin - MySQL Multigraph Munin Plugin</title>
+  <meta charset='utf-8'>
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="description" content="PyMunin Munin Multigraph Monitoring Plugin for MySQL in Python.">
+  <meta name="keywords" content="PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, MySQL">
+  <link href="../style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23944587-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  
+  <div id="container">
+
+    <h1><a href="../index.html">PyMunin</a>
+      <span class="small">MySQL Plugin</span></h1>
+
+    <div class="description">
+	    PyMunin Multigraph Munin Plugin for monitoring MySQL Database Server.
+    </div>
+
+    <h2>MySQL Plugin - mysqlstats</h2>
+    <p>The multigraph plugin implements the following graphs:
+    <ul>
+      <li>mysql_connections
+      <li>mysql_traffic
+      <li>mysql_slowqueries
+      <li>mysql_rowmodifications
+      <li>mysql_rowreads
+      <li>mysql_tablelocks
+      <li>mysql_threads
+      <li>mysql_proc_status
+      <li>mysql_proc_db
+      <li>mysql_commits_rollbacks
+      <li>mysql_qcache_memory
+      <li>mysql_qcache_hits
+      <li>mysql_qcache_prunes
+      <li>mysql_myisam_key_buffer_util
+      <li>mysql_myisam_key_read_reqs
+      <li>mysql_innodb_buffer_pool_util
+      <li>mysql_innodb_buffer_pool_activity
+      <li>mysql_innodb_buffer_pool_read_reqs
+      <li>mysql_innodb_row_ops
+    </ul>
+    
+    <h2>Environment Variables</h2>
+    <p>
+    <table class="TableAttrs" summary="Enviroment variables used by the plugin.">
+    	<tr>
+    		<th>Variable</th>
+    		<th>Description</th>
+    	</tr>
+    	<tr>
+    		<td>host</td>
+    		<td>MySQL Server IP.<br>
+    			(Defaults to UNIX socket if not provided.)
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>port</td>
+    		<td>MySQL Server Port<br>
+    			(3306 by default.)</td>
+    	</tr>
+    	<tr>
+    		<td>database</td>
+    		<td>MySQL Database</td>
+    	</tr>
+    	<tr>
+    		<td>user</td>
+    		<td>Database User Name</td>
+    	</tr>
+    	<tr>
+    		<td>password</td>
+    		<td>Database User Password</td>
+    	</tr>
+    	<tr>
+    		<td>include_engine</td>
+    		<td>Comma separated list of MySQL Storage Engines to include in 
+    			graphs.<br>
+    			(All engines are enabled by default.)
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>exclude_engine</td>
+    		<td>Comma separated list of MySQL Storage Engines to exclude from 
+    			graphs.</td>
+    	</tr>
+    	<tr>
+    		<td>include_graphs</td>
+    		<td>Comma separated list of enabled graphs.<br>
+    			(All graphs enabled by default.)
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>exclude_graphs</td>
+    		<td>Comma separated list of disabled graphs.</td>
+    	</tr>
+    </table>
+
+  </div>
+  
+</body>
+</html>

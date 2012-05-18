@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PyMunin - PostgreSQL Multigraph Munin Plugin</title>
+  <meta charset='utf-8'>
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="description" content="PyMunin Munin Multigraph Monitoring Plugin for PostgreSQL in Python.">
+  <meta name="keywords" content="PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, PostgreSQL">
+  <link href="../style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23944587-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  
+  <div id="container">
+
+    <h1><a href="../index.html">PyMunin</a>
+      <span class="small">PostgreSQL Plugin</span></h1>
+
+    <div class="description">
+	    PyMunin Multigraph Munin Plugin for monitoring PostgreSQL Database Server.
+    </div>
+
+    <h2>PostgreSQL Plugin - pgstats</h2>
+    <p>The multigraph plugin implements the following graphs:
+    <ul>
+      <li>pg_connections
+      <li>pg_diskspace
+      <li>pg_blockreads
+      <li>pg_xact
+      <li>pg_checkpoints
+      <li>pg_bgwriter
+      <li>pg_tup_read
+      <li>pg_tup_write
+      <li>pg_blockreads_detail
+      <li>pg_xact_commit_detail
+      <li>pg_xact_rollback_detail
+      <li>pg_tup_return_detail
+      <li>pg_tup_fetch_detail
+      <li>pg_tup_delete_detail
+      <li>pg_tup_update_detail
+      <li>pg_tup_insert_detail
+    </ul>
+
+    <h2>Sample Graphs</h2>
+    <p>
+    <table summary="Sample Graphs">
+      <tr valign=top>
+        <td><img src="./img/pg_connections-day.png" alt="PostgreSQL Connections"></td>
+        <td><img src="./img/pg_diskspace-day.png" alt="PostgreSQL Disk Space"></td>
+      </tr>
+      <tr valign=top>
+        <td><img src="./img/pg_blockreads-day.png" alt="PostgreSQL Block Reads"></td>
+        <td><img src="./img/pg_xact-day.png" alt="PostgreSQL Transactions"></td>
+      </tr>
+      <tr valign=top>
+        <td><img src="./img/pg_tup_read-day.png" alt="PostgreSQL Tuple Reads"></td>
+        <td><img src="./img/pg_tup_write-day.png" alt="PostgreSQL Tuple Writes"></td>
+      </tr>
+      <tr valign=top>
+        <td><img src="./img/pg_bgwriter-day.png" alt="PostgreSQL BgWriter Stats"></td>
+        <td><img src="./img/pg_checkpoints-day.png" alt="PostgreSQL Checkpoints"></td>
+      </tr>
+    </table>
+    
+	<h2>Environment Variables</h2>
+    <p>
+    <table class="TableAttrs" summary="Enviroment variables used by the plugin.">
+    	<tr>
+    		<th>Variable</th>
+    		<th>Description</th>
+    	</tr>
+    	<tr>
+    		<td>host</td>
+    		<td>PostgreSQL Server IP.<br>
+    			(Defaults to UNIX socket if not provided.)</td>
+    	</tr>
+    	<tr>
+    		<td>port</td>
+    		<td>PostgreSQL Server Port<br>
+    			(Defaults to 5432 for network connections.)</td>
+    	</tr>
+    	<tr>
+    		<td>database</td>
+    		<td>PostgreSQL Database for monitoring connection.<br>
+    			(The default is the login the for connecting user.</td>
+    	</tr>
+    	<tr>
+    		<td>user</td>
+    		<td>Database User Name<br>
+    			(The default is the login of OS user for UNIX sockets.
+    			Must be specified for network connections.)
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>password</td>
+    		<td>Database User Password<br>
+    			(Attempt login without password by default.)
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>include_db</td>
+    		<td>Comma separated list of databases to include in detail graphs.<br>
+    			(All enabled by default.)</td>
+    	</tr>
+    	<tr>
+    		<td>exclude_db</td>
+    		<td>Comma separated list of databases to exclude from detail 
+    			graphs.</td>
+    	</tr>
+    	<tr>
+    		<td>detail_graphs</td>
+    		<td>Enable (on) / disable (off) detail graphs.<br>
+    			(Disabled by default.)</td>
+    	</tr>
+    	<tr>
+    		<td>include_graphs</td>
+    		<td>Comma separated list of enabled graphs.<br>
+    			(All graphs enabled by default.)
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>exclude_graphs</td>
+    		<td>Comma separated list of disabled graphs.</td>
+    	</tr>
+    </table>
+
+
+  </div>
+  
+</body>
+</html>

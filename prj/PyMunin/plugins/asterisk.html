@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PyMunin - Asterisk Multigraph Munin Plugin</title>
+  <meta charset='utf-8'>
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="description" content="PyMunin Munin Multigraph Monitoring Plugin for Asterisk in Python.">
+  <meta name="keywords" content="PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, Asterisk">
+  <link href="../style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23944587-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  
+  <div id="container">
+
+    <h1><a href="../index.html">PyMunin</a>
+      <span class="small">Asterisk Plugin</span></h1>
+
+    <div class="description">
+	    PyMunin Multigraph Munin Plugin for monitoring Asterisk Telephony Server.
+    </div>
+    
+    <h2>Asterisk Plugin - asteriskstats</h2>
+    <p>
+    The multigraph plugin implements the following graphs:
+    <ul>
+      <li>asterisk_calls
+      <li>asterisk_channels
+      <li>asterisk_peers_sip
+      <li>asterisk_peers_iax2
+      <li>asterisk_voip_codecs
+      <li>asterisk_conferences
+      <li>asterisk_voicemail
+      <li>asterisk_trunks
+      <li>asterisk_queue_len
+	  <li>asterisk_queue_avg_hold
+	  <li>asterisk_queue_avg_talk
+	  <li>asterisk_queue_calls
+	  <li>asterisk_queue_abandon_pcent
+	  <li>asterisk_fax_stats
+    </ul>
+
+    <h2>Sample Graphs</h2>
+    <p>
+    <table summary="Sample Graphs">
+      <tr valign=top>
+        <td><img src="./img/asterisk_calls-day.png " alt="Asterisk Calls"></td>
+        <td><img src="./img/asterisk_trunks-day.png" alt="Asterisk Trunks"></td>
+      </tr>
+      <tr valign=top>
+        <td><img src="./img/asterisk_peers_sip-day.png" alt="Asterisk SIP Peers"></td>
+        <td><img src="./img/asterisk_peers_iax2-day.png" alt="Asterisk IAX2 Peers"></td>
+      </tr>
+      <tr valign=top>
+        <td><img src="./img/asterisk_channels-day.png"  alt="Asterisk Channels"></td>
+        <td><img src="./img/asterisk_voip_codecs-day.png" alt="Asterisk VoIP Codecs"></td>
+      </tr>
+    </table>
+    
+    <h2>Environment Variables</h2>
+    <p>
+    <table class="TableAttrs" summary="Enviroment variables used by the plugin.">
+    	<tr>
+    		<th>Variable</th>
+    		<th>Description</th>
+    	</tr>
+    	<tr>
+    		<td>amihost</td>
+    		<td>IP of Asterisk Server.<br>
+    			(Default: 127.0.0.1)</td>
+    	</tr>
+    	<tr>
+    		<td>amiport</td>
+    		<td>Asterisk Manager Interface Port.<br>
+    			(Default: 5038)</td>
+    	</tr>
+    	<tr>
+    		<td>amiuser</td>
+    		<td>Asterisk Manager Interface User.</td>
+    	</tr>
+    	<tr>
+    		<td>amipass</td>
+    		<td>Asterisk Manager Interface Password.</td>
+    	</tr>
+    	<tr>
+    		<td>list_channels</td>
+    		<td>List of channels that will be shown in channel stats.<br>
+                (Default: dahdi,zap,sip',iax2,local)</td>
+    	</tr>
+    	<tr>
+    		<td>list_codecs</td>
+    		<td>List of codecs that will be shown in VoIP channel stats.<br>
+                (Default: alaw,ulaw,gsm,g729)<br>
+                Any codec that is not in the list will be counted as 'other'.</td>
+    	</tr>
+    	<tr>
+    		<td>list_trunks</td>
+    		<td>Comma separated search expressions of the following formats:
+    			<ul>
+    				<li>"Trunk Name"="Regular Expr"
+    					<li>"Trunk Name"="Regular Expr with Named Group 'num'"="MIN"-"MAX"	
+    			</ul>
+                Check Python Regular Expressions docs for help on writing 
+                regular expressions:http://docs.python.org/library/re.html</td>
+    	</tr>
+    	<tr>
+    		<td>include_queues</td>
+    		<td>Comma separated list of queues to include in  graphs.<br>
+                  (All queues included by default.)</td>
+    	</tr>
+    	<tr>
+    		<td>exclude_queues</td>
+    		<td>Comma separated list of queues to exclude from graphs.</td>
+    	</tr>
+    	<tr>
+    		<td>include_graphs</td>
+    		<td>Comma separated list of enabled graphs.<br>
+    			(All graphs enabled by default.)
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>exclude_graphs</td>
+    		<td>Comma separated list of disabled graphs.</td>
+    	</tr>    
+    </table>
+    
+  </div>
+  
+</body>
+</html>
