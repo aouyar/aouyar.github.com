@@ -35,7 +35,7 @@
         <div class="ym-g50 ym-gr">
           <div class="ym-gbox-right">
           	<a href="{{ page.baseptr }}/prj/{{ page.prjname }}">{{ page.prjname }}</a> 
-          	@ <a href="https://github.com/{{ page.prjname }}">GitHub</a>
+          	@ <a href="https://github.com/{{ site.user }}/{{ page.prjname }}">GitHub</a>
           </div>
        </div>
      </div> 
@@ -46,7 +46,8 @@
         <div class="ym-wbox">
             <a href="{{ page.baseptr }}/prj/{{ page.prjname }}"><h2>{{ page.prjname }}</h2></a>
             <p>
-              <b>{{ page.munin_plugin_short }}</b><br>
+              <a href="{{ page.baseptr }}/prj/{{ page.prjname }}/index.html#plugins"><b>Multigraph Munin Plugins</b></a><br>
+              {{ page.munin_plugin_short }}<br>
               {{page.munin_plugin_name}}
             </p>
         </div>
