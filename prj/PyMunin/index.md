@@ -74,7 +74,10 @@ _PyMunin_:
 * [Network Interfaces](./plugins/netiface.html)
 * [Network Connections](./plugins/netstats.html)
 * [Nginx Web Server](./plugins/nginx.html)
-* [NTP - Time Synchronization Server](./plugins/ntp.html)
+* NTP - Time Synchronization Server
+   * NTP [Synchronization State](./plugins/ntpstats.html)
+   * NTP [Remote Host Offset](./plugins/ntpremote.html)
+   * NTP [Remote Host Offsets](./plugins/ntpremotes.html)
 * [PHP APC (PHP Cache)](./plugins/phpapc.html)
 * [PHP FPM (FastCGI Process Manager)](./plugins/phpfpm.html)
 * [PostgreSQL Database Server](./plugins/postgresql.html)
