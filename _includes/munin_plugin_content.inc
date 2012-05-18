@@ -3,6 +3,11 @@ About
 
 {{ page.munin_plugin_long }}
 
+{% if page.munin_plugin_note %}
+
+{{ page.munin_plugin_note}}
+
+{% endif %}
 
 Graphs
 ------

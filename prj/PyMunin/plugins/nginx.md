@@ -1,13 +1,13 @@
 ---
 baseptr: ../../..
 layout: munin_plugin
-description: PyMunin Munin Multigraph Monitoring Plugin for Apache Web Server in Python.
-keywords: PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, Apache, Web Server
+description: PyMunin Munin Multigraph Monitoring Plugin for Nginx Web Server in Python.
+keywords: PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, Nginx, Web Server
 prjname: PyMunin
 prjdesc: Python Module for developing Munin Multigraph Monitoring Plugins
-munin_plugin_name: apachestats
-munin_plugin_short: Apache Web Server Plugin
-munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Apache Web 
+munin_plugin_name: nginxstats
+munin_plugin_short: Nginx Web Server Plugin
+munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Nginx Web 
                    Server.
 
 hnav:
@@ -19,35 +19,32 @@ hnav:
     - License
                    
 munin_plugin_graphs:
-    - apache_access
-    - apache_bytes
-    - apache_workers
-    
-munin_plugin_samples:
-    - src: apache_access-day.png
-      alt: Apache Access
-    - src: apache_bytes-day.png
-      alt: Apache Traffic
-    - src: apache_workers-day.png
-      alt: Apache Workers
+    - nginx_activeconn
+    - nginx_connections
+    - nginx_requests
+    - nginx_requestsperconn
 
 munin_plugin_vars:
     - name: host
       desc: |
-            Apache Web Server Host.
+            Nginx Web Server Host.
             (Default: 127.0.0.1)
     - name: port
       desc: |
-            Apache Web Server Port
+            Nginx Web Server Port
             (Default: 80, SSL: 443)
     - name: user
       desc: "User in case authentication is required for access to server-status page."
     - name: password
       desc: "Password in case authentication is required for access to server-status page."
     - name: statuspath
-      desc: "Path for Apache Web Server Status Page.\n(Default: server-status)"
+      desc: "Path for Nginx Web Server Status Page.\n(Default: server-status)"
     - name: ssl
       desc: "Use SSL if yes.\n(Default: no)"
+    - name: samples
+      desc: |
+            Number of samples to collect for calculating running averages.
+            (Six samples for 30 minute running average are stored by default.)
     - name: include_graphs
       desc: |
             Comma separated list of enabled graphs.
