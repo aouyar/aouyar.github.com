@@ -9,7 +9,7 @@
     <meta name="author" content="{{ site.author }}">
     <meta name="description" content="{{ site.user }} - {{site.username }} - {{ page.prjname }} - {{ page.description }}" />
     <meta name="keywords" content="{{ page.keywords }}">
-    <title>{{ page.prjname}} @ GitHub by {{ site.username }}</title>
+    <title>{{ page.prjname}} - {{ page.munin_plugin_short}}</title>
     
 {% include css.inc %}
     
@@ -27,7 +27,7 @@
 	  	<div class="ym-g50 ym-gl">
 	  	  <div class="ym-gbox">
 	  	  	<div class="ym-gbox-left">
-	  	  		<a href="{{ page.baseptr }}/">{{ site.user }}</a>
+	  	  		<a href="{{ page.baseptr }}">{{ site.user }}</a>
 	  	  		@ <a href="https://github.com/{{ site.user }}">GitHub</a>
 	  	    </div>
 	  	  </div>
@@ -44,8 +44,11 @@
     <header role="banner">
       <div class="ym-wrapper">
         <div class="ym-wbox">
-            <h2>{{ page.prjname }}</h2>
-            <p>{{ page.prjdesc }}</p>
+            <a href="{{ page.baseptr }}/prj/{{ page.prjname }}"><h2>{{ page.prjname }}</h2></a>
+            <p>
+              <b>{{ page.munin_plugin_short }}</b><br>
+              {{page.munin_plugin_name}}
+            </p>
         </div>
       </div>
     </header>
@@ -60,7 +63,17 @@
             		{% if forloop.index == 1 %}
               			<li class="active"><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
               		{% else %}
-              			<li><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              			{% if tab_name == 'Samples' %}
+              				{% if page.munin_plugin_samples %}
+              				  <li><a href="#samples">Samples</a>
+              				{% endif %}
+              			{% elsif tab_name == 'Configuration' %}
+              				{% if page.munin_plugin_vars %}
+              				  <li><a href="#configuration">Configuration</a>
+              				{% endif %}
+              			{% else %}
+              				<li><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              			{% endif %}
               		{% endif %}
               	{% endfor %}
             </ul>
@@ -72,7 +85,7 @@
     <div id="main" class="ym-clearfix" role="main">
 	  <div class="ym-wrapper">
 		<div class="ym-wbox">
-			{{ content }}
+			{{content}}
 		</div>
 	  </div>
 	</div>	
