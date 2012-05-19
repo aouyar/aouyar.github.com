@@ -41,7 +41,7 @@ Projects
 
 {% for project in page.projects %}
 {% if project.prjpage %}
-* [{{ project.name }}] (./prj/{{ project.name }}/)
+* [{{ project.name }}] (./{{ project.name }}/)
   @ [GitHub] (https://github.com/{{ site.user }}/{{ project.name }}/) - {{ project.shortdesc }}
   <br>{{ project.longdesc }}
 {% else %}
