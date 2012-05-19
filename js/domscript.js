@@ -8,9 +8,6 @@ $(document).ready(function() {
 
 			self.installStickyMenu();
 			self.installTabs();
-			// self.installSyntaxHighlighting();
-			self.installGrid();
-			self.installFormSwitcher();
 		},
 
 		installStickyMenu: function installStickyMenu () {
@@ -87,6 +84,7 @@ $(document).ready(function() {
 							return false;
 						}
 					});
+
 				});
 
 				// initial check for scroll-status ...
@@ -95,8 +93,7 @@ $(document).ready(function() {
 
 				if ($('body').hasClass('doc') === true) {
 
-					// var stateObj = { page: window.location };
-					// alert(window.location)
+					var stateObj = { page: "index" };
 
 					// jump to a named anchor ...
 					$('#level2 a').bind('click', function(event){
@@ -121,8 +118,7 @@ $(document).ready(function() {
 							$(document).scrollTop(pos-2*nHeight);
 						}
 						// update URL id fragment
-						// history.pushState(stateObj, "docs", id);
-						window.location = id
+						history.pushState(stateObj, "docs", window.location.pathname + id);
 					});
 				}
 			}
@@ -149,52 +145,6 @@ $(document).ready(function() {
 			});
 		},
 
-		installSyntaxHighlighting: function installSyntaxHighlighting () {
-			var highlightStyle = "peachpuff";
-
-			if (jQuery.fn.snippet) {
-				$("pre.htmlCode").snippet("html", {style: highlightStyle});
-				$("pre.cssCode").snippet("css", {style: highlightStyle});
-				$("pre.jsCode").snippet("javascript", {style: highlightStyle});
-			}
-		},
-
-		installGrid: function installGrid () {
-
-			// vertical rhythm lines for typography section ...
-			if (jQuery.fn.gridBuilder) {
-				$(".v-grid").gridBuilder({
-					color: '#eee', // color of the primary gridlines
-					secondaryColor: '#f9f9f9', // color of the secondary gridlines
-					vertical: 21, // height of the vertical rhythm
-					horizontal: 2000, // width of horizontal strokes
-					gutter: 0 // width of the gutter between strokes
-				});
-			}
-		},
-
-		installFormSwitcher: function installFormSwitcher () {
-			$('#formswitch [type="checkbox"]').prop('checked', true);
-			$('#formswitch [type="radio"]:first').prop('checked', true);
-			
-			$('#formswitch').change(function(event){
-				var target = event.target,
-					type   = $(target).data('type');
-				
-				if ($(target).attr('type') == 'radio') {
-					$('#demo-form1, #demo-form2').removeClass('ym-columnar');
-					$('#demo-form1, #demo-form2').removeClass('ym-full');
-					$('#demo-form1, #demo-form2').addClass(type);
-				}
-				if ($(target).attr('type') == 'checkbox') {
-					if ($(target).prop('checked') === true) {
-						$('#demo-form1, #demo-form2').addClass('linearize-form');
-					} else {
-						$('#demo-form1, #demo-form2').removeClass('linearize-form');
-					}
-				}
-			});
-		}
 	};
 
 	domscripts.init();
