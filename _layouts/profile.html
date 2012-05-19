@@ -19,7 +19,7 @@
   	<!-- skip link navigation -->
 	<ul class="ym-skiplinks">
 	  <li><a class="ym-skip" href="#level2">Skip to navigation (Press Enter)</a></li>
-	  <li><a class="ym-skip" href="#overview">Skip to main content (Press Enter)</a></li>
+	  <li><a class="ym-skip" href="#about">Skip to main content (Press Enter)</a></li>
 	</ul>
 	
 	<div id="intro" role="contentinfo">
@@ -42,8 +42,13 @@
         <div class="ym-wbox">
           <div class="ym-hlist">
             <ul>
-              <li class="active"><a href="#projects">Projects</a>
-              <li><a href="#contact">Contact</a>
+                {% for tab_name in page.hnav %}
+            		{% if forloop.index == 1 %}
+              			<li class="active"><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              		{% else %}
+              			<li><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              		{% endif %}
+                {% endfor %}
             </ul>
           </div>
         </div>

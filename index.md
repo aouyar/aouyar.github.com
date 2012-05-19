@@ -1,8 +1,13 @@
 ---
 baseptr: .
 layout: profile
-description: Playground for Free Software Projects.
+description: Playground for Free Software Projects
 keywords: Ali Onur Uyar, GitHub, Free Software, Collaboration
+
+hnav:
+    - About
+    - Projects
+    - Contact
 
 projects:
     - name: PyMunin
@@ -35,6 +40,19 @@ projects:
       prjpage: false
 	
 ---
+
+
+About
+-----
+
+I am an Electrical and Electronics Engineer who has been working with Free 
+Software since 1997. I started working a Software Developer on Solaris Platform,
+then went on to work in IT Security, System Administrator for UNIX Platforms
+(GNU/Linux, Solaris, AIX and HP/UX), IT Infrastructure Specialist and 
+IP Telephony Specialist.
+
+Here you can find information on some side projects published as Free Software.
+
 
 Projects
 --------
