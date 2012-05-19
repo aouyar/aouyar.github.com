@@ -34,7 +34,7 @@
 	  	</div>
         <div class="ym-g50 ym-gr">
           <div class="ym-gbox-right">
-          	<a href="{{ page.baseptr }}/prj/{{ page.prjname }}">{{ page.prjname }}</a> 
+          	<a href="{{ page.baseptr }}/{{ page.prjname }}">{{ page.prjname }}</a> 
           	@ <a href="https://github.com/{{ site.user }}/{{ page.prjname }}">GitHub</a>
           </div>
        </div>
@@ -44,9 +44,9 @@
     <header role="banner">
       <div class="ym-wrapper">
         <div class="ym-wbox">
-            <a href="{{ page.baseptr }}/prj/{{ page.prjname }}"><h2>{{ page.prjname }}</h2></a>
+            <a href="{{ page.baseptr }}/{{ page.prjname }}"><h2>{{ page.prjname }}</h2></a>
             <p>
-              <a href="{{ page.baseptr }}/prj/{{ page.prjname }}/index.html#plugins"><b>Multigraph Munin Plugins</b></a><br>
+              <a href="{{ page.baseptr }}/{{ page.prjname }}/index.html#plugins"><b>Multigraph Munin Plugins</b></a><br>
               {{ page.munin_plugin_short }}<br>
               {{page.munin_plugin_name}}
             </p>

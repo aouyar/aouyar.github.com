@@ -1,5 +1,5 @@
 ---
-baseptr: ../..
+baseptr: ..
 layout: project
 description: |
              PyMunin - Python Module for Munin Multigraph Monitoring Plugins. 

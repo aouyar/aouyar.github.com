@@ -1,5 +1,5 @@
 ---
-baseptr: ../..
+baseptr: ..
 layout: project
 description: Python Module for implementing backup scripts.
 keywords: python, backup, script, mysql, postgresql, archive, tar
