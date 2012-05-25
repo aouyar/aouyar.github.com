@@ -33,8 +33,7 @@ projects:
                 connecting to Microtik RouterOS routers and Linux machines via 
                 MAC address. Added MAC SSH client and server functionality for 
                 tunneling SSH protocol instead of implementing shell interface 
-                directly. It is great to be able to SSH into a box, which has
-                no IP address. Facilitates initial provisioning of servers and 
+                directly. Facilitates initial provisioning of servers and 
                 embedded systems and might save the day if the network 
                 configuration gets messed up.
       prjpage: false
