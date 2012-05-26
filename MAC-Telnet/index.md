@@ -87,6 +87,20 @@ The client supports three modes of operation:
   the serverthrough MAC-Telnet protocol.
 * SSH Forwarding Mode: Apart from setting up the tunnel, the client takes care 
   of launching the SSH client.
+ 
+<pre>
+Standart MAC-Telnet Mode
+
+[MAC-Telnet Cli] ---UDP---> [MAC-Telnet Srv]
+
+TCP Connection Forwarding Mode
+
+---TCP---> [MAC-Telnet Cli] ---UDP---> [MAC-Telnet Srv]---TCP--->
+
+SSH Forwarding Mode
+
+[SSH Cli] --->TCP---> [MAC-Telnet Cli] ---UDP---> [MAC-Telnet Srv] ---TCP---> [SSH Srv]
+</pre>
 
 The _SSH Forwarding Mode_ has the following advantages in comparison to standard
 _MAC-Telnet_:
@@ -172,7 +186,10 @@ the distribution:
 Usage
 -----
 
-###mactelnet###
+### mactelnet ###
+
+
+#### Usage ####
 
 	$ mactelnet -h
 	
@@ -191,7 +208,7 @@ Usage
 	  -u <user>     Specify username on command line.
 	  -p <pass>     Specify password on command line.
 	  -U <user>     Drop privileges by switching to user, when the command is
-	                run as a privileged user in conjunction with -n option.
+	                run as a privileged user in conjunction with the -n option.
 	  -S            Use MAC-SSH instead of MAC-Telnet. (Implies -F)
 	                Forward SSH connection through MAC-Telnet and launch SSH client.
 	  -F            Forward connection through of MAC-Telnet without launching the 
@@ -206,7 +223,28 @@ Usage
 	All arguments after '--' will be passed to the ssh client command.
 
 
+#### Examples ####
+
+Establish standard MAC-Telnet session with remote box:
+
+	$ mactelnet aa:bb:cc:dd:ee:ff
+
+Forward local port 4001:
+
+	$ mactelnet -F -P 4001 aa:bb:cc:dd:ee:ff
+
+Establish SSH connection with remote box:
+
+	$ mactelnet -S -u root aa:bb:cc:dd:ee:ff
+	
+Establish SSH connection with remote box, forwarding additional ports using SSH Port Forwarding:
+
+	$ mactelnet -S -u root aa:bb:cc:dd:ee:ff -- -L8080:127.0.0.1:80 -L443:127.0.0.1:8443
+
+
 ### mactelnetd ###
+
+#### Usage ####
 
 	$ mactelnetd -h
 	
@@ -215,22 +253,41 @@ Usage
 	Parameters:
 	  -f         Run process in foreground.
 	  -n         Do not use broadcast packets. Just a tad less insecure.
-	  -S / -F    Tunneling of TCP connections through  MAC-Telnet protocol,
-	             instead of standard MAC-Telnet use.
-	  -P <port>  Local TCP port for SSH Server.
+	  -S / -F    Forwarding of TCP connections through  MAC-Telnet protocol,
+	             instead of using the standard MAC-Telnet remote terminal.
+	  -P <port>  Local TCP port used for forwarding connections to SSH Server.
 	             (If not specified, port 22 by default.)
 	  -U <user>  Drop privileges by switching to user, when the command is
-	             run as a privileged user in conjunction with -n option.
+	             run as a privileged user in conjunction with the -n option.
 	             Standard MAC-Telnet is not compatible with this option.
 	  -v         Print version and exit.
 	  -h         Print help and exit.
 
 
+#### Examples ####
+
+Launch MAC-Telnet Daemon for receiving Standard MAC-Telnet protocol connections:
+
+	# mactelnetd
+
+Launch MAC-Telnet Daemon for forwarding connections to local SSH Daemon listening 
+on port 22:
+
+	$ mactelnetd -S
+	
+Launch MAC-Telnet Daemon for forwarding connections to local SSH Daemon listening
+on non-standard port 2222:
+
+	$ mactelnetd -S -p 2222
+
+
 ### macping ###
+
+#### Usage ####
 
 	$ macping -h
 	
-	Usage: ./macping <MAC> [-h] [-f] [-c <count>] [-s <packet size>]
+	Usage: macping <MAC> [-h] [-f] [-c <count>] [-s <packet size>]
 	
 	Parameters:
 	  MAC       MAC-Address of the RouterOS/mactelnetd device.
@@ -240,7 +297,19 @@ Usage
 	  -h        This help.
 
 
+#### Examples ####
+
+	$ macping aa:bb:cc:dd:ee:ff
+	
+
 ### mndp ###
+
+#### Usage ####
+	
+	Usage: mndp
+
+
+#### Examples ####
 
 	$ mndp
 
