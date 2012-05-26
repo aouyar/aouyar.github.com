@@ -44,9 +44,9 @@
             <ul>
                 {% for tab_name in page.hnav %}
             		{% if forloop.index == 1 %}
-              			<li class="active"><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              			<li class="active"><a href="#{{ tab_name | downcase | replace:' ','_' }}">{{ tab_name }}</a>
               		{% else %}
-              			<li><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              			<li><a href="#{{ tab_name | downcase | replace:' ','_' }}">{{ tab_name }}</a>
               		{% endif %}
                 {% endfor %}
             </ul>

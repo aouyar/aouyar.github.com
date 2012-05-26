@@ -62,7 +62,7 @@
             <ul>
             	{% for tab_name in page.hnav %}
             		{% if forloop.index == 1 %}
-              			<li class="active"><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              			<li class="active"><a href="#{{ tab_name | downcase | replace:' ','_' }}">{{ tab_name }}</a>
               		{% else %}
               			{% if tab_name == 'Samples' %}
               				{% if page.munin_plugin_samples %}
@@ -73,7 +73,7 @@
               				  <li><a href="#configuration">Configuration</a>
               				{% endif %}
               			{% else %}
-              				<li><a href="#{{ tab_name | downcase }}">{{ tab_name }}</a>
+              				<li><a href="#{{ tab_name | downcase | replace:' ','_' }}">{{ tab_name }}</a>
               			{% endif %}
               		{% endif %}
               	{% endfor %}

@@ -12,7 +12,8 @@ hnav:
 projects:
     - name: PyMunin
       shortdesc: Python Module for developing Munin Multigraph Monitoring Plugins
-      longdesc: Implements a framework for implementing Munin Plugins.
+      longdesc: |
+                Implements a framework for implementing Munin Plugins.
                 Multigraph Plugins are provided for Apache Web Server, 
                 Apache Tomcat, APC PHP Cache, PHP FPM (Fast Process Manager), 
                 Asterisk, FreeSWITCH, Lighttpd, Memcached, MySQL Database, Nginx, 
@@ -22,21 +23,27 @@ projects:
       prjpage: true
     - name: pybackup
       shortdesc: Python Module for implementing backup scripts.
-      longdesc: Being developed as an alternative to custom shell scripts
-                that improves on error checking and reporting.
+      longdesc: |
+                Backups scripts in _Python_, being developed as an alternative 
+                to backup task specific custom shell scripts.
+                Backup jobs are defined in a configuration file and different 
+                backup methods are implemented by plugins, that improve on error 
+                checking and reporting.
       prjpage: true
     - name: MAC-Telnet
-      shortdesc: Telnet / SSH using MAC Address (Client and Server)
-      longdesc: Based on the original work of 
+      shortdesc: Telnet / SSH via MAC Address (Client and Server)
+      longdesc: |
+                Open source MAC Telnet client and server for connecting to 
+                Mikrotik RouterOS routers and Linux machines via MAC address. 
+                Based on the original work of 
                 [haakonnessjoen](https://github.com/haakonnessjoen) 
-                (Håkon Nessjøen); Open source MAC Telnet client and server for 
-                connecting to Microtik RouterOS routers and Linux machines via 
-                MAC address. Added MAC SSH client and server functionality for 
+                (Håkon Nessjøen); forked the upstream version to add forwarding 
+                mode for tunneling a TCP connection through MAC-Telnet protocol, 
+                and implemented MAC-SSH client and server functionality for 
                 tunneling SSH protocol instead of implementing shell interface 
-                directly. Facilitates initial provisioning of servers and 
-                embedded systems and might save the day if the network 
-                configuration gets messed up.
-      prjpage: false
+                directly. Use cases include initial provisioning of servers and 
+                embedded systems and recovery from IP Stack configuration errors.
+      prjpage: True
 	
 ---
 

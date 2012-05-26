@@ -28,3 +28,7 @@ Using the code as a guide for constructing your own website is covered under
 fair use rights, so if you are building a web site using [YAML CSS Framework](http://www.yaml.de/)
 just give links to the original authors, 
 YAML homepage [http://www.yaml.de](http://www.yaml.de).
+
+For information on other projects you can check 
+my [GitHub Personal Page](http://aouyar.github.com)
+and [GitHub Profile](https://github.com/aouyar).

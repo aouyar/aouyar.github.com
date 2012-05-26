@@ -54,6 +54,7 @@ The code for retrieval of data is totally separated from _Munin_ specific code.
 The modules for data retrieval in _pysysinfo_ can be used independently of 
 _Munin_ in other monitoring solutions.
 
+{% include prj_link_home.inc %}
 
 
 Plugins

@@ -19,6 +19,11 @@ hnav:
 About
 -----
 
+Backups scripts in _Python_, being developed as an alternative to backup task 
+specific custom shell scripts. Backup jobs are defined in a configuration file 
+and different backup methods are implemented by plugins, that improve on error 
+checking and reporting.
+
 Development started, when I was fed up with developing custom shell scripts for 
 each backup task, and needed something with better error checking and reporting.
 
@@ -31,6 +36,7 @@ following plugins have been implemented for the time being:
 
 *WARNING*: This is still alpha software.
 
+{% include prj_link_home.inc %}
 
 
 Download
