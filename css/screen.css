@@ -636,6 +636,16 @@
 	}
 	pre, code { color:#222; }
 	
+	div.posttitle {
+        color: #8B8F90;
+        font-size:133.33%;
+    }
+    
+    div.postdate {
+        color: #8B8F90;
+        font-size:133.33%;
+        white-space: nowrap;
+    }
 }
 
 @media screen and (min-width: 0px)  {

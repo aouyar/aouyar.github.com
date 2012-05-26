@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset='utf-8' />
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{{ site.user }} - {{site.username }} - {{ page.prjname }} - {{ page.description }}" />
+{% if post.keywords %}
+    <meta name="keywords" content="{{ post.keywords }}">
+{% endif %}
+    <title>{{ site.username }} - {{ post.date }} - {{ post.title }}</title>
+    
+{% include css.inc %}
+    
+  </head>
+
+  <body id="yaml-top" class="doc">
+{% capture post_title %}
+{% if page.prjname %}
+{{ page.prjname }} -
+{% endif %}
+{{ page.title }}
+{% endcapture %}
+
+ {% if page.prjname %} 	
+	<div id="intro-2" role="contentinfo">
+	  <div class="ym-grid linearize-level-2">
+	  	<div class="ym-g50 ym-gl">
+	  	  <div class="ym-gbox">
+	  	  	<div class="ym-gbox-left">
+	  	  		<a href="{{ page.baseptr }}/">{{ site.user }}</a>
+	  	  		@ <a href="https://github.com/{{ site.user }}">GitHub</a>
+	  	    </div>
+	  	  </div>
+	  	</div>
+        <div class="ym-g50 ym-gr">
+          <div class="ym-gbox-right">
+          	<a href="{{ page.baseptr }}/{{ page.prjname }}">{{ page.prjname }}</a> 
+          	@ <a href="https://github.com/{{ site.user }}/{{ page.prjname }}">GitHub</a>
+          </div>
+       </div>
+     </div> 
+   </div>
+{% else %}
+	<div id="intro" role="contentinfo">
+		<a href="./">{{ site.user}}</a> @ 
+	    <a href="https://github.com/{{ site.user }}">GitHub</a>
+    </div>
+{% endif %}
+
+    <header role="banner">
+      <div class="ym-wrapper">
+        <div class="ym-wbox">
+            <h2>{{ site.username }}</h2>
+            <p>Blog for Free Software Projects</p>
+        </div>
+      </div>
+    </header>
+
+    <div id="main" class="ym-clearfix" role="main">
+	  <div class="ym-wrapper">
+		<div class="ym-wbox">
+		    <section class="box info">
+			<h4>
+			    {{ post_title }}<br>
+			    <small>{{ page.date | date_to_string }}</small>
+			</h4>
+			</section>
+			{{ content }}
+		</div>
+	  </div>
+	</div>	
+
+
+	<footer role="contentinfo">
+      <div class="ym-wrapper">
+        <div class="ym-wbox">
+          <div class="ym-grid linearize-level-2">
+          	<div class="ym-g66 ym-gl">
+			  <div class="ym-gbox-left">
+		        <p>Author: 
+		          <a href="{{ page.baseptr }}/">{{ site.user }}</a>
+		          @ <a href="https://github.com/{{ site.user}}/">GitHub</a><br>
+		          Last Update: {{site.time}}
+		          </p>
+		      </div>
+		    </div>
+		    <div class="ym-g33 ym-gr">
+			  <div class="ym-gbox-right">
+	            <p>Layout based on <a href="http://www.yaml.de">YAML</a></p>
+	          </div>
+		    </div>
+	      </div>
+        </div>
+      </div>
+    </footer>
+  
+{% include js.inc %}
+
+  </body>
+
+</html>
