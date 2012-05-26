@@ -497,6 +497,8 @@
 	.ym-gbox-left { padding:0 20px 0 0; text-align: left }
 
 	.ym-gbox-right { padding:0 0 0 20px; text-align: right }
+	
+	.ym-gbox-center { padding:0 20px 0 20px; text-align: center }
 
 	.ym-cbox { padding:0 10px; }
 
