@@ -20,6 +20,7 @@ prjpypi: false
 license_file: LICENSE
 
 hnav:
+    - Updates
     - About
     - Differences
     - Use Cases
@@ -32,6 +33,12 @@ hnav:
     - License
 	
 ---
+
+Updates
+-------
+
+{% assign post_list = site.categories.MAC-Telnet %}
+{% include prj_posts.inc %}
 
 
 About

@@ -19,6 +19,7 @@ prjdesc: Python Module for developing Munin Multigraph Monitoring Plugins
 prjpypi: true
 
 hnav:
+    - Updates
     - About
     - Plugins
     - Download
@@ -31,6 +32,12 @@ hnav:
     - License
 	
 ---
+
+Updates
+-------
+
+{% assign post_list = site.categories.PyMunin %}
+{% include prj_posts.inc %}
 
 
 About
