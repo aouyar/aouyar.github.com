@@ -8,10 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="author" content="{{ site.author }}">
     <meta name="description" content="{{ site.user }} - {{site.username }} - {{ page.prjname }} - {{ page.description }}" />
-{% if post.keywords %}
-    <meta name="keywords" content="{{ post.keywords }}">
+{% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
 {% endif %}
-    <title>{{ site.username }} - {{ post.date }} - {{ post.title }}</title>
+    <title>{{ page.date | date_to_string }} - {{ page.title }}</title>
     
 {% include css.inc %}
     

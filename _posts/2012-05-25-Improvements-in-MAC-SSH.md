@@ -21,5 +21,5 @@ The following new features were implemented for the MAC-SSH mode:
   passed directly to the _SSH_ client.
 * Permit running _mactelnetd_ as unprivileged user, when forwarding 
   mode or _SSH_ mode is used. 
-* New command line option ( _-U_ )for dropping privileges as soon as possible, when the
-  client or server requieres privileged user, because of _-n_ option.
+* New command line option ( _-U_ )for dropping privileges as soon as possible, 
+  when the client or server requieres privileged user, because of _-n_ option.
