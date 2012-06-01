@@ -279,7 +279,7 @@ Usage
 
 ### Summary of Options ###
 
-#### pg_manage.pl ####
+#### pg\_manage.pl ####
 
 	$ pg_manage.pl -h
 	Help on Usage
@@ -317,7 +317,7 @@ Usage
 	usage: pg_manage.pl [-n] [-d] [-q] -c check_secondary
 
 
-#### pg_check_replication.sh ####
+#### pg\_check\_replication.sh ####
 
 	$ pg_check_replication.sh 
 	PRIMARY: node1
@@ -335,7 +335,7 @@ Usage
 
 
 
-### pg_manage.pl - Common Options ###
+### pg\_manage.pl - Common Options ###
 
 	-h                 Print help text.
 	-d                 Debug mode.
@@ -386,7 +386,7 @@ Usage
 
 
 
-### pg_manage.pl - Backup of Transaction Log Files - xlog_archive ###
+### pg\_manage.pl - Backup of Transaction Log Files - xlog_archive ###
 
 Compresses _Transaction Log_ files and copies it to the _Backup Server_.
 
@@ -414,7 +414,7 @@ Sample fragment from _postgresql.conf_:
 
 
 
-### pg_manage.pl - Retrieval of Transaction Log Files - xlog_restore ###
+### pg\_manage.pl - Retrieval of Transaction Log Files - xlog_restore ###
 
 Retrieves compressed _Transaction Log_ files from _Backup Server_ and uncompresses
 the files.
@@ -477,7 +477,7 @@ Sample _recovery.conf_ file for _Streaming Replication_:
 
 
 
-### pg_manage.pl - End Recovery Process - recovery_trigger_(fast|smart) ###
+### pg\_manage.pl - End Recovery Process - recovery_trigger_(fast|smart) ###
 
 Generate _Trigger File_ for finalizing the recovery process as soon as possible:
 
@@ -496,20 +496,20 @@ Remove any existing _Trigger Files_:
 
 
 
-### pg_manage.pl - Initialize Database - db_destroy ###
+### pg\_manage.pl - Initialize Database - db_destroy ###
 
 Delete data directories to prepare the PostgreSQL Database Server for recovery.
 
 	Usage: pg_manage.pl [-n] [-d] [-q] -c db_destroy
 
-<p class="box warning">
+<p class="box warning" markdown="1">
 The command deletes data directories of _PostgreSQL Server_. In case there are 
 no other copies, this might result in a total loss of data.  
 </p>
 
 
 
-### pg_manage.pl - Hot Backup - db_hotbackup ###
+### pg\_manage.pl - Hot Backup - db_hotbackup ###
 
 Executes a _Hot Backup_ of the _PostgreSQL Database_ if the database is _online_,
 executes a _Cold Backup_ if the database is _offline_. The backup is stored in
@@ -524,16 +524,9 @@ _Archive Logs_. The _Hot Backup_ will not be of any use unless the backups of
 _Archive Logs_ or also stored in the _Backup Server_.
 </p>
 
-<p class="box warning" markdown="1">
-If more than one _Hot Backup_ is generated in the same day, the last backup will
-overwrite the previous one. In case the previous backups from the same day must
-be preserved, the administrator must move or rename existing backup files before
-executing the _Hot Backup_ again.
-</p>
 
 
-
-### pg_manage.pl - Recovery from Hot/Cold Backup - db_restore_backup ###
+### pg\_manage.pl - Recovery from Hot/Cold Backup - db_restore_backup ###
 
 Executes recovery of _PostgreSQL Database_ from a _Hot_ or _Cold_ backup file 
 stored on the _Backup Server_.
@@ -565,7 +558,8 @@ _Archive Logs_ are available on the _Backup Server_.
 </p>
 
 
-### pg_manage.pl - Export (Dump) of a Database - db_export ###
+
+### pg\_manage.pl - Export (Dump) of a Database - db_export ###
 
 Generates a _Compressed Database Dump_ ( _Export_ ) of a database at the Backup 
 Server.
@@ -581,16 +575,8 @@ _dbapp_:
     $ pg_manage.pl -c db_export -D dbapp
 
 
-<p class="box warning" markdown="1">
-If more than one _Dump_ ( _Export_ )is generated in the same day, the last backup 
-will overwrite the previous one. In case the previous backups from the same day 
-must be preserved, the administrator must move or rename existing backup files 
-before executing the dump again.
-</p>
 
-
-
-### pg_manage.pl - Restore a Database from a Database Dump - db_import ###
+### pg\_manage.pl - Restore a Database from a Database Dump - db_import ###
 
 Restores a database from a _Compressed Database Dump_ (_export_) of a database 
 stored at the _Backup Server_. 
@@ -620,7 +606,7 @@ existing database is dropped or renamed before executing the import..
 
 
 
-### pg_manage.pl - Initial Sync of Databases for Replication - db_initial_sync ###
+### pg\_manage.pl - Initial Sync of Databases for Replication - db_initial_sync ###
 
 The command must only be executed on the _Secondary Server_ for performing an
 initial copy of data from the _Primary Server_.
@@ -630,7 +616,7 @@ initial copy of data from the _Primary Server_.
 
 <p class="box warning" markdown="1">
 The initial replication process must be executed only on the secondary server.
-The _pg_manage.conf_ configuration file in both the primary and secondary 
+The _pg\_manage.conf_ configuration file in both the primary and secondary 
 _PostgreSQL_ servers must checked to confirm that the roles of both servers are
 configured correctly, before executing the initial replication process.
 </p>
@@ -650,16 +636,16 @@ _Archive Logs_ or also stored in the _Backup Server_.
 
 
 
-### pg_manage.pl - Verify Server Role - check_primary / check_secondary ###
+### pg\_manage.pl - Verify Server Role - check_primary / check_secondary ###
 
-The _check_primary_ command returns _0_ ( _true_ ) if the server is configured
-as _Primary Server, _1_ ( _false_ ) otherwise.
+The _check\_primary_ command returns _0_ ( _true_ ) if the server is configured
+as _Primary Server_, _1_ ( _false_ ) otherwise.
 
 	Usage: pg_manage.pl [-n] [-d] [-q] -c check_primary
 
 
-The _check_secondary_ command returns _0_ ( _true_ ) if the server is configured
-as _Secondary Server, _1_ ( _false_ ) otherwise.
+The _check\_secondary_ command returns _0_ ( _true_ ) if the server is configured
+as _Secondary Server_, _1_ ( _false_ ) otherwise.
 
 	Usage: pg_manage.pl [-n] [-d] [-q] -c check_primary
 
@@ -675,7 +661,7 @@ TODO
 ----
 
 * Migrate the scripts to  _Python_.
-* Implement the _pg_basebackup_ command to take advantage of the _Base Backup_ 
+* Implement the _pg\_basebackup_ command to take advantage of the _Base Backup_ 
   funcionality in _PostgreSQL 9.1_.
 * Adapt the scripts to other _Linux_ distributions and other versions of
   _PostgreSQL_ database.
