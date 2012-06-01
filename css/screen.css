@@ -646,6 +646,31 @@
         font-size:133.33%;
         white-space: nowrap;
     }
+    
+    table.fitwidth {
+    	width: 0;	
+    }
+    
+    table.fitwidth th {
+    	text-align: center;	
+    }
+    
+    .info {
+		background:#f4f4f4;
+	}
+
+	.success {
+		background:#8c8;
+	}
+
+	.warning {
+		background:#ffffa0;
+	}
+
+	.error {
+		background:#c88;
+	}
+    
 }
 
 @media screen and (min-width: 0px)  {

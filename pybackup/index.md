@@ -4,7 +4,7 @@ layout: project
 description: Python Module for implementing backup scripts.
 keywords: python, backup, script, mysql, postgresql, archive, tar
 prjname: pybackup
-prjdesc: Python Module for implementing backup scripts
+prjdesc: Python Module for Implementing Backup Scripts
 prjpypi: false
 
 hnav:

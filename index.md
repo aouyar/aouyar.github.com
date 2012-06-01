@@ -23,13 +23,24 @@ projects:
                 Network Connections, Processes and Threads, etc.
       prjpage: true
     - name: pybackup
-      shortdesc: Python Module for implementing backup scripts.
+      shortdesc: Python Module for Implementing Backup Scripts
       longdesc: |
                 Backups scripts in _Python_, being developed as an alternative 
                 to backup task specific custom shell scripts.
                 Backup jobs are defined in a configuration file and different 
                 backup methods are implemented by plugins, that improve on error 
                 checking and reporting.
+      prjpage: true
+    - name: pg_manage
+      shortdesc: Backup / Recovery Scripts for PostgreSQL Database
+      longdesc: |
+                Scripts for automating automating backup and recovery tasks for 
+                PostgreSQL Database Server. The following tasks are implemented: 
+                sending archive logs to backup server, retrieval of archive logs 
+                from backup server, initialization of database, generation of 
+                hot backups with archive logging, recovery from hot backup, dump
+                (export) and restore (import) of databases and initial 
+                synchronization of database servers for setting up replication.
       prjpage: true
     - name: MAC-Telnet
       shortdesc: Telnet / SSH via MAC Address (Client and Server)
