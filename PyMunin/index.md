@@ -147,29 +147,7 @@ yum install PyMunin
 	    
 #### Automated Installation ####
 	    
-The code can be downloaded and installed automatically 
-using [pip](http://www.pip-installer.org/) or the user can download and 
-uncompress the code and execute the the included _setup.py_ script for 
-installation.
-
-To install the latest version published 
-in [PyPI](http://pypi.python.org/pypi/{{ page.prjname }})
-using [pip](http://www.pip-installer.org/) execute:
-
-<pre>pip install PyMunin</pre>
-
-To install the latest development version directly 
-from [GitHub](https://github.com/{{ site.user }}/{{ page.prjname }})
-using [pip](http://www.pip-installer.org/) execute:
-
-<pre>pip install git+https://github.com/aouyar/PyMunin.git#egg=PyMunin</pre>
-	    	
-To install using the <i>setup.py</i> script included in the distribution once 
-the code is downloaded
-from [GitHub](https://github.com/{{ site.user }}/{{ page.prjname }})
-and uncompressed manually:
-
-<pre>./setup.py install</pre>
+{% include install_pip.inc %}
 					
 This will install _pymunin_ and _pysysinfo_ in <i>Python</i> site packages.
 The plugins will be unpacked as console scripts into the install _bin_ directory. 

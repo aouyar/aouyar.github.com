@@ -10,6 +10,7 @@ prjpypi: false
 hnav:
     - About
     - Download
+    - Installation
     - Usage
     - License
 	
@@ -44,6 +45,15 @@ Download
 
 {% include download.inc %}
 
+
+Installation
+------------
+
+{% include install_pip.inc %}
+
+The application depends on _PyMunin_ and the dependency will automatically be
+installed as long as there is a Internet connection, but you may have to install
+_PyMunin_ manually if you do not have access to [PyPI](http://pypi.python.org).	
 
 
 Usage
