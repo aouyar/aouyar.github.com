@@ -65,7 +65,11 @@
 		<div class="ym-wbox">
 		    <section class="box info">
 			<h4>
-			    {{ post_title }}<br>
+				{% if page.prjname %}
+					<a href="/{{ page.prjname }}">{{ page.prjname }}</a> -
+				{% endif %}
+				{{ page.title }}
+			    <br>
 			    <small>{{ page.date | date_to_string }}</small>
 			</h4>
 			</section>

@@ -35,6 +35,8 @@ munin_plugin_graphs:
     - pg_tup_delete_detail
     - pg_tup_update_detail
     - pg_tup_insert_detail
+    - pg_locks_all
+    - pg_locks_wait
     
 munin_plugin_samples:
     - src: pg_connections-day.png
