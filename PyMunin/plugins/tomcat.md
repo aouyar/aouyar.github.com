@@ -9,7 +9,24 @@ munin_plugin_name: tomcatstats
 munin_plugin_short: Apache Tomcat Server Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Apache Tomcat 
                    Server.
-munin_plugin_note: "<p>The <i>Apache Tomcat</i> <i>status</i> page must be configured and it must be accesible using credentials registered in <i>Plugin Configuration</i>.\nConfiguration example from <i>tomcat-users.xml</i>:\n<pre>&lt;user username=\"munin\" password=\"********\" roles=\"standard,manager\"/&gt;</pre></p>"
+munin_plugin_note: |
+                   The _Apache Tomcat_ _status_ page must be configured and it 
+                   must be accesible using credentials registered in 
+                   _Plugin Configuration_.
+                   
+                   Configuration example from _tomcat-users.xml_ for _Tomcat 6_:
+                   
+                       <user username="munin" password="********" roles="standard,manager"/>
+                   
+                   Configuration example from _tomcat-users.xml_ for _Tomcat 7_, 
+                   with minimum level of privileges; access to Status Page only:
+                   
+                       <user username="munin" password="********" roles="manager-status"/>
+    
+                   Configuration example from _tomcat-users.xml_ for _Tomcat 7_ 
+                   with privileges to access to Manager GUI and Status Page:
+                   
+                       <user username="munin" password="********" roles="manager-gui,manager-status"/>
 
 hnav:
     - About

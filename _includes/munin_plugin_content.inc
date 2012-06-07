@@ -5,7 +5,7 @@ About
 
 {% if page.munin_plugin_note %}
 
-{{ page.munin_plugin_note}}
+{{ page.munin_plugin_note }}
 
 {% endif %}
 
