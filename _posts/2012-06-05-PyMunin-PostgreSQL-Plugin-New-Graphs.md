@@ -1,6 +1,6 @@
 ---
 layout: post
-title: New Graphs in PostgreSQL Plugin
+title: New Graphs in PostgreSQL Plugin for Monitoring Locks
 category: PyMunin
 prjname: PyMunin
 keywords: PyMunin, Munin, Plugin, PostgreSQL, Locks

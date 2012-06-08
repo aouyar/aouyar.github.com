@@ -27,6 +27,9 @@ munin_plugin_graphs:
     - pg_bgwriter
     - pg_tup_read
     - pg_tup_write
+    - pg_lock_all
+    - pg_lock_wait
+    - pg_repl_conflicts
     - pg_blockreads_detail
     - pg_xact_commit_detail
     - pg_xact_rollback_detail
@@ -35,8 +38,9 @@ munin_plugin_graphs:
     - pg_tup_delete_detail
     - pg_tup_update_detail
     - pg_tup_insert_detail
-    - pg_locks_all
-    - pg_locks_wait
+    - pg_lock_all_detail
+    - pg_lock_wait_detail
+    - pg_repl_conflicts_detail
     
 munin_plugin_samples:
     - src: pg_connections-day.png
@@ -87,6 +91,10 @@ munin_plugin_vars:
     - name: detail_graphs
       desc: | 
             Enable (on) / disable (off) detail graphs.
+            (Disabled by default.)
+    - name: repl_graphs
+      desc: | 
+            Enable (on) / disable (off) replication status graphs.
             (Disabled by default.)
     - name: include_graphs
       desc: |
