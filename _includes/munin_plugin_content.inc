@@ -28,11 +28,19 @@ Samples
 
 Sample graphs for plugin:
 
-<div class="ym-contain-dt">
+<table>
 {% for img in page.munin_plugin_samples %}
-<img src="./img/{{ img.src }}" alt="{{ img.alt }}" class="float-left bordered">
+{% cycle '<tr>', '' %}
+	<td>
+		<img src="./img/{{ img.src }}" alt="{{ img.alt }}" class="float-left bordered">
+	</td>
+{% if forloop.last %}
+</tr>
+{% else %}
+{% cycle '', '</tr>' %}
+{% endif %}
 {% endfor %}
-</div>
+</table>
 
 {% endif %}
 
