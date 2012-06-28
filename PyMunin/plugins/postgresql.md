@@ -47,7 +47,7 @@ munin_plugin_samples:
       alt: PostgreSQL Connections
     - src: pg_diskspace-day.png
       alt: PostgreSQL Disk Space
-    - src: pg_blockreads-day
+    - src: pg_blockreads-day.png
       alt: PostgreSQL Block Reads
     - src: pg_xact-day.png
       alt: PostgreSQL Transactions
@@ -59,6 +59,10 @@ munin_plugin_samples:
       alt: PostgreSQL BgWriter Stats
     - src: pg_checkpoints-day.png
       alt: PostgreSQL Checkpoints
+    - src: pg_lock_all-day.png
+      alt: PostgreSQL Locks (All)
+    - src: pg_lock_wait-day.png
+      alt: PostgreSQL Locks (Wait)
 
 munin_plugin_vars:
     - name: host

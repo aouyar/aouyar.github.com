@@ -37,18 +37,18 @@ munin_plugin_graphs:
     - sys_vm_swapping
     
 munin_plugin_samples:
-    - src: sys_vm_paging-day.png
-      alt: VM Paging
-    - src: sys_vm_swapping-day.png
-      alt: VM Swapping
-    - src: sys_mem_avail-day.png
-      alt: Memory Active/Inactive
-    - src: sys_mem_util-day.png
-      alt: Memory Utilization
     - src: sys_cpu_util-day.png
       alt: CPU Utilization
     - src: sys_loadavg-day.png
       alt: Load Average
+    - src: sys_mem_avail-day.png
+      alt: Memory Active/Inactive
+    - src: sys_mem_util-day.png
+      alt: Memory Utilization
+    - src: sys_vm_paging-day.png
+      alt: VM Paging
+    - src: sys_vm_swapping-day.png
+      alt: VM Swapping
 
 munin_plugin_vars:
     - name: include_graphs

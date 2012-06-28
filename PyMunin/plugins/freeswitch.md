@@ -24,6 +24,12 @@ munin_plugin_graphs:
     - fs_calls
     - fs_channels
 
+munin_plugin_samples:
+    - src: fs_calls-day.png
+      alt: Active Calls
+    - src: fs_channels-day.png
+      alt: Active Channels
+
 munin_plugin_vars:
     - name: fshost
       desc: |
