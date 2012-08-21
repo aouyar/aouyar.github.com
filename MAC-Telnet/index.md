@@ -49,7 +49,7 @@ routers and Linux machines via MAC address.
              
 Based on [MAC-Telnet](https://github.com/haakonnessjoen/MAC-Telnet) 
 the original work of 
-[haakonnessjoen](https://github.com/haakonnessjoen) (_Håkon Nessjøen_);
+[haakonnessjoen](https://github.com/haakonnessjoen) ( _Håkon Nessjøen_ );
 forked the upstream version to add forwarding mode for tunneling a TCP 
 connection through MAC-Telnet protocol, and implemented MAC-SSH client and 
 server functionality for tunneling SSH protocol instead of implementing shell 
@@ -57,7 +57,7 @@ interface directly.
 
 Unless you will be using any of the additional functionalities, I recommend 
 using the [Original Version](https://github.com/haakonnessjoen/MAC-Telnet) from
-[haakonnessjoen](https://github.com/haakonnessjoen) (_Håkon Nessjøen_) instead.
+[haakonnessjoen](https://github.com/haakonnessjoen) ( _Håkon Nessjøen_ ) instead.
 
 For information on other projects you can check 
 my [GitHub Personal Page](http://aouyar.github.com)
@@ -153,7 +153,8 @@ Download
 ### Binary Packages ###
 
 The original version of the _MAC-Telnet_ has been packaged for _Debian GNU/Linux_
-by the original author [haakonnessjoen](https://github.com/haakonnessjoen) (_Håkon Nessjøen_).
+by the original 
+author [haakonnessjoen](https://github.com/haakonnessjoen) ( _Håkon Nessjøen_ ).
 You can download the _deb_ packages for the original version from the 
 [Downloads Page](https://github.com/haakonnessjoen/MAC-Telnet/downloads) 
 of the [Upstream Project](https://github.com/haakonnessjoen/MAC-Telnet/). 
@@ -162,7 +163,7 @@ of the [Upstream Project](https://github.com/haakonnessjoen/MAC-Telnet/).
 ### Source Packages ###
 
 The original version of the _MAC-Telnet_ 
-by [haakonnessjoen](https://github.com/haakonnessjoen) (_Håkon Nessjøen_) can
+by [haakonnessjoen](https://github.com/haakonnessjoen) ( _Håkon Nessjøen_ ) can
 be download from the project page of the 
 [Upstream Project](https://github.com/haakonnessjoen/MAC-Telnet/). 
 
@@ -335,7 +336,8 @@ Credits
 -------
 
 [MAC-Telnet](https://github.com/haakonnessjoen/MAC-Telnet) has originally been 
-developed by [haakonnessjoen](https://github.com/haakonnessjoen) (_Håkon Nessjøen_).
+developed 
+by [haakonnessjoen](https://github.com/haakonnessjoen) ( _Håkon Nessjøen_ ).
 
 The code published on this page is a fork with some experimental features for
 establishing _SSH_ connections via _MAC Address_. The additional features have 
