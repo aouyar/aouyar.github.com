@@ -6,8 +6,8 @@ description: |
              Plugins for Apache, Tomcat, Asterisk, Disk I/O, Disk Usage, 
              FreeSWITCH, Lighttpd, Memcached, MySQL, Network Interfaces, 
              Network Connections, Nginx, NTP, PHP APC, PHP FPM, PostgreSQL,
-             Rackspace Cloud, Varnish Cache, System CPU and Memory Utilization, 
-             VM Paging and Swapping, etc.
+             Rackspace Cloudfiles, Varnish Cache, 
+             System CPU and Memory Utilization, VM Paging and Swapping, etc.
 keywords: |
           PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, Apache, 
           Tomcat, PHP, APC, FPM, Asterisk, FreeSWITCH, Lighttpd, Memcached, 

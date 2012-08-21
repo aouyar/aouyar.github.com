@@ -17,7 +17,8 @@ projects:
                 Implements a framework for implementing Munin Plugins.
                 Multigraph Plugins are provided for Apache Web Server, 
                 Apache Tomcat, APC PHP Cache, PHP FPM (Fast Process Manager), 
-                Asterisk, FreeSWITCH, Lighttpd, Memcached, MySQL Database, Nginx, 
+                Asterisk, FreeSWITCH, Lighttpd, Memcached, MySQL Database, Nginx,
+                Rackspace Coudfiles, 
                 NTP, PostgreSQL Database, Varnish Cache, CPU Utilization, 
                 Memory Utilization, Disk Usage, Disk I/O, Network Interfaces, 
                 Network Connections, Processes and Threads, etc.
