@@ -5,15 +5,15 @@ description: |
              PyMunin - Python Module for Munin Multigraph Monitoring Plugins. 
              Plugins for Apache, Tomcat, Asterisk, Disk I/O, Disk Usage, 
              FreeSWITCH, Lighttpd, Memcached, MySQL, Network Interfaces, 
-             Network Connections, Nginx, NTP, PHP APC, PHP FPM, PostgreSQL, 
-             Varnish Cache, System CPU and Memory Utilization, VM Paging and 
-             Swapping, etc.
+             Network Connections, Nginx, NTP, PHP APC, PHP FPM, PostgreSQL,
+             Rackspace Cloud, Varnish Cache, System CPU and Memory Utilization, 
+             VM Paging and Swapping, etc.
 keywords: |
           PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, Apache, 
           Tomcat, PHP, APC, FPM, Asterisk, FreeSWITCH, Lighttpd, Memcached, 
-          MySQL, Network, Interfaces, Connections, Nginx, NTP, PostgreSQL, 
-          Varnish, Cache, System, CPU, Memory, Disk Usage, Disk I/O, Processes, 
-          Forks, Interrupts
+          MySQL, Network, Interfaces, Connections, Nginx, NTP, PostgreSQL,
+          Rackspace, Cloud, Varnish, Cache, System, CPU, Memory, Disk Usage, 
+          Disk I/O, Processes, Forks, Interrupts
 prjname: PyMunin
 prjdesc: Python Module for developing Munin Multigraph Monitoring Plugins
 prjpypi: true
@@ -94,6 +94,10 @@ _PyMunin_:
 * [Sangoma Wanpipe Telephony Interfaces](./plugins/wanpipe.html)
 * [Varnish Cache Web Application Accelerator](./plugins/varnish.html)
 
+
+The following plugins that have been contributed externally have been included
+in the base distribution:
+* [Rackspace Cloud](./plugins/rackspace.html)
 
 
 Download
@@ -299,10 +303,14 @@ development are:
   [Matthias Runge](www.matthias-runge.de).
 * The initial design of the solution was inspired 
   by [python-munin](https://github.com/samuel/python-munin) 
-  by [samuel](https://github.com/samuel) (Samuel Stauffer).		
+  by [samuel](https://github.com/samuel) (Samuel Stauffer).
+* The Rackspace Cloud plugin was developed
+  by [palewire](https://github.com/palewire) (Brian Welsh)
+  and it is the first plugin that has been contributed to the project. 
 * Many plugins were inspired by existing _Munin Plugins_developed by other 
   people. (Before developing any plugins, I always try to check existing 
   solutions.)
+* Many people have contributed by testing the plugins and identifying issues.
 
 
 I hope that more people will be using _{{page.prjname}}_ for developing 
