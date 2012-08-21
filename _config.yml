@@ -1,5 +1,5 @@
 safe: true
-auto: false
+auto: true
 lsi: false
 pygments: true
 
