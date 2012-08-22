@@ -86,10 +86,20 @@ following table:
 Credits
 -------
 
-_{{page.munin_plugin_short}}_ ( _{{ page.munin_plugin_name }}_ ) 
+{% if page.contributor %}
+{{ page.contributor | markdownify }}
+  {% if page.contributor %}
+  The following improvements have been implemented
+  by [{{ site.username }}]({{ page.baseptr}}/) ([{{ site.user }} @ GitHub] (https://github.com/{{ site.user }})):
+  
+  {{ page.updates | markdownify }}
+  
+  {% endif %}
+{% else %}
+_{{ page.munin_plugin_short }}_ ( _{{ page.munin_plugin_name }}_ ) 
 has been developed 
-by [Ali Onur Uyar]({{ page.baseptr}}/) ([{{ site.user }} @ GitHub] (https://github.com/{{ site.user }})).
-
+by [{{ site.username }}]({{ page.baseptr}}/) ([{{ site.user }} @ GitHub] (https://github.com/{{ site.user }})).
+{% endif %}
 
 
 License

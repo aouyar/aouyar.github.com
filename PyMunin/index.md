@@ -90,15 +90,10 @@ _PyMunin_:
 * [PHP FPM (FastCGI Process Manager)](./plugins/phpfpm.html)
 * [PostgreSQL Database Server](./plugins/postgresql.html)
 * [Processes and Threads](./plugins/process.html)
+* [Rackspace Cloud](./plugins/rackspace.html)
 * [System Resources](./plugins/system.html)
 * [Sangoma Wanpipe Telephony Interfaces](./plugins/wanpipe.html)
 * [Varnish Cache Web Application Accelerator](./plugins/varnish.html)
-
-
-The following plugins that have been contributed externally have been included
-in the base distribution:
-
-* [Rackspace Cloud](./plugins/rackspace.html)
 
 
 Download
@@ -305,7 +300,7 @@ development are:
 * The initial design of the solution was inspired 
   by [python-munin](https://github.com/samuel/python-munin) 
   by [samuel](https://github.com/samuel) (Samuel Stauffer).
-* The Rackspace Cloud plugin was developed
+* The Rackspace Cloud plugin was initially developed
   by [palewire](https://github.com/palewire) (Brian Welsh)
   and it is the first plugin that has been contributed to the project. 
 * Many plugins were inspired by existing _Munin Plugins_developed by other 
