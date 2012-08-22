@@ -97,6 +97,7 @@ _PyMunin_:
 
 The following plugins that have been contributed externally have been included
 in the base distribution:
+
 * [Rackspace Cloud](./plugins/rackspace.html)
 
 
