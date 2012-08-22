@@ -50,7 +50,13 @@ munin_plugin_vars:
       desc: Comma separated list of containers to include in graphs.
             (All enabled by default.)
     - name: exclude_container
-      desc: Comma separated list of containers to exclude from graphs.    
+      desc: Comma separated list of containers to exclude from graphs.
+    - name: include_graphs
+    - desc: |
+            Comma separated list of enabled graphs.
+            (All graphs enabled by default.)
+    - name: exclude_graphs
+      desc: Comma separated list of disabled graphs.   
 
 
     
