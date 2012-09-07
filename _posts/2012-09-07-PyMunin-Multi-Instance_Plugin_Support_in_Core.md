@@ -43,3 +43,7 @@ database servers, etc. can be monitored from one node.
 
 You can check the [PyMunin Project Documentation](/PyMunin/#configuration) for
 more information of configuration of multiple instances of plugins.
+
+The multi-instance functionality is still lacking field testing; any feedback 
+would be highly appreciated.
+
