@@ -9,6 +9,8 @@ munin_plugin_name: nginxstats
 munin_plugin_short: Nginx Web Server Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Nginx Web 
                    Server.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 munin_plugin_note: The web server _status_ page handler must be configured 
                    and it must be accesible through the web server.
 

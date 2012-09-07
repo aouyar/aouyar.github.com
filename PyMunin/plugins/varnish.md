@@ -11,6 +11,8 @@ munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Varnish Cache
                    Web Application Accelerator.
 munin_plugin_note: The plugin must be run with a user with sufficient privileges
                    to execute varnishstat utility.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 
 hnav:
     - About

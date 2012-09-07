@@ -16,6 +16,8 @@ munin_plugin_note: The plugin permits the generation of multiple graphs for
                    only once instead of executing plugin scripts for each graph 
                    for every interface. All wanpipe interfaces except are 
                    graphed by default. 
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: false
 
 hnav:
     - About

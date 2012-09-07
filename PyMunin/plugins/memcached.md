@@ -10,6 +10,8 @@ munin_plugin_name: memcachedstats
 munin_plugin_short: Memcached Cache Server Plugin
 munin_plugin_long: PyMunin Munin Multigraph Monitoring Plugin for Memcached  
                    Distributed Memory Object Caching System.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 
 hnav:
     - About

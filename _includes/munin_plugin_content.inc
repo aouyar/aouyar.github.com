@@ -9,6 +9,29 @@ About
 
 {% endif %}
 
+<table class="fitwidth">
+	<tr>
+		<td>Multigraph Plugin:</td>
+		<td>
+			{%if page.munin_plugin_multigraph %}
+				Yes
+			{% else %}
+			    No
+			{% endif %}
+		</td>
+	</tr>
+	<tr>
+		<td>Multi-instance Plugin:</td>
+		<td>
+			{%if page.munin_plugin_multiinstance %}
+				Yes
+			{% else %}
+			    No
+			{% endif %}
+		</td>
+	</tr>
+</table>
+
 Graphs
 ------
 
@@ -78,6 +101,48 @@ following table:
 </table>
 
 </div>
+
+{% if page.munin_plugin_multiinstance %}
+
+Additionally the following configuration variables are implemented by the plugin 
+for _Multi Instance_ support:
+
+<div class="ym-contain-dt">
+
+<table>
+	<thead>
+	<tr>
+		<th>Variable</th>
+		<th>Description</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>instance_name</td>
+		<td>Name of instance.</td>
+	</tr>
+	<tr>
+		<td>instance_label</td>
+		<td>Graph title label for instance.
+            (Default is the same as instance name.)</td>
+	</tr>
+	<tr>
+		<td>instance_label_format</td>
+		<td>
+			Controls how the instance label will be added to the graph title:
+			<ul>
+				<li>suffix (Default)</li>
+                <li>prefix</li>
+                <li>none</li>
+			</ul>
+		</td>
+	</tr>
+    </tbody>
+</table>
+
+</div>
+
+{% endif %}
 
 {% endif %}
 

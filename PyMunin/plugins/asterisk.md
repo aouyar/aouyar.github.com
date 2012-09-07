@@ -9,6 +9,8 @@ munin_plugin_name: asteriskstats
 munin_plugin_short: Asterisk Telephony Server Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Asterisk 
                    Telephony Server.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 
 hnav:
     - About

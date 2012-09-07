@@ -9,6 +9,8 @@ munin_plugin_name: pgstats
 munin_plugin_short: PostgreSQL Database Server Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring PostgreSQL 
                    Database Server.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 
 hnav:
     - About

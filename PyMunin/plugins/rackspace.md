@@ -9,6 +9,8 @@ munin_plugin_name: rackspacestats
 munin_plugin_short: Rackspace Cloud Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Rackspace 
                    Cloud Services.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 contributor: Rackspace Cloud Plugin (rackspacestats) 
              has been contributed
              by [palewire](https://github.com/palewire) (Ben Welsh).

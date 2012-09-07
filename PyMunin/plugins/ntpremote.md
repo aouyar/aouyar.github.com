@@ -12,6 +12,8 @@ munin_plugin_short: NTP Host Offset Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring the 
                    synchronization status (stratum, offset, network delay) of 
                    a single remote host using _ntpdate_.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 munin_plugin_note: This a _wild card_ plugin and the name of the plugin must be 
                    suffixed with the _IP_ of the host to be monitored, when 
                    linking the plugin script to the _Munin Plugins Directory_ 

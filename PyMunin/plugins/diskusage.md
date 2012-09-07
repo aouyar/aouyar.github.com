@@ -9,6 +9,8 @@ munin_plugin_name: diskusagestats
 munin_plugin_short: Disk Space Utilization Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for Monitoring Disk Space and 
                    Inode Usage of Filesystems.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: false
 
 hnav:
     - About

@@ -12,6 +12,8 @@ munin_plugin_short: NTP Time Sychronization State Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring 
                    NTP Time Sychronization state of active sincronization peer
                    using _ntpq_.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: false
 munin_plugin_note: The plugin permits monitoring the stratum of the active peer 
                    and the estimated time offset, network delay and jitter.
 

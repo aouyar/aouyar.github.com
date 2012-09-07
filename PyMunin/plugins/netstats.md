@@ -11,6 +11,8 @@ munin_plugin_name: netstats
 munin_plugin_short: Network Connection Stats Plugin
 munin_plugin_long: PyMunin Munin Multigraph Monitoring Plugin for Network 
                    Connection Stats obtained from _netstat_.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: false
 
 hnav:
     - About

@@ -8,6 +8,8 @@ prjdesc: Python Module for developing Munin Multigraph Monitoring Plugins
 munin_plugin_name: diskiostats
 munin_plugin_short: Disk I/O Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for Monitoring Disk I/O Stats.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: false
 
 hnav:
     - About

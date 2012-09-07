@@ -9,6 +9,8 @@ prjdesc: Python Module for developing Munin Multigraph Monitoring Plugins
 munin_plugin_name: netifacestats
 munin_plugin_short: Network Interfaces Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Network Interfaces.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: false
 munin_plugin_note: The plugin permits the generation of the traffic and error 
                    graphs for multiple network interfaces by running the script 
                    only once instead of executing plugin scripts for each graph 

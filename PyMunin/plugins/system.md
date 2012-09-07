@@ -14,6 +14,8 @@ munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring System
                    Resources; Load Average, CPU and Memory Utilization, 
                    Processes, Forks, Interrupts, Context Switches, Paging and 
                    Swapping etc.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: false
 munin_plugin_note: The web server _status_ page handler must be configured 
                    and it must be accesible through the web server.
 

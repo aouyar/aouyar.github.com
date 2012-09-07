@@ -9,6 +9,8 @@ munin_plugin_name: phpapcstats
 munin_plugin_short: APC PHP Cache Plugin
 munin_plugin_long: PyMunin Munin Multigraph Monitoring Plugin for APC PHP
                    Accelaration Cache.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 munin_plugin_note: The PHP script _apcinfo.php_ must be placed somewhere in the 
                    _document root_ and have access permissions from localhost 
                    to permit retrieval of stats from _APC_. The script can be 

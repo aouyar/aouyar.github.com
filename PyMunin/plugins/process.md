@@ -10,6 +10,8 @@ munin_plugin_name: procstats
 munin_plugin_short: Process and Thread Stats Plugin
 munin_plugin_long: PyMunin Munin Multigraph Monitoring Plugin for Process and 
                    Thread Stats.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: false
 
 hnav:
     - About

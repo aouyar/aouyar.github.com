@@ -9,6 +9,8 @@ munin_plugin_name: tomcatstats
 munin_plugin_short: Apache Tomcat Server Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Apache Tomcat 
                    Server.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 munin_plugin_note: |
                    The _Apache Tomcat_ _status_ page must be configured and it 
                    must be accesible using credentials registered in 

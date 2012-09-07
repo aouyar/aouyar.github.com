@@ -11,6 +11,8 @@ munin_plugin_name: fsstats
 munin_plugin_short: FreeSWITCH Telephony Server Plugin
 munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring FreeSWITCH 
                    Soft Switch.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 
 hnav:
     - About

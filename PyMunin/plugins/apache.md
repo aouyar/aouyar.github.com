@@ -11,6 +11,8 @@ munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring Apache Web
                    Server.
 munin_plugin_note: The web server _status_ page handler must be configured 
                    and it must be accesible through the web server.
+munin_plugin_multigraph: true
+munin_plugin_multiinstance: true
 
 hnav:
     - About
