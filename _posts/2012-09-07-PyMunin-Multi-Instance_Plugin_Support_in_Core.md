@@ -18,10 +18,13 @@ nopage: false
 ---
 
 Support for running multiple instances of plugins has been added to the 
-PyMunin Plugin Framework Core. 
+PyMunin Plugin Framework Core.
 
-Multi-instance support can be activated in any plugin by adding a single line to 
-the plugin class definition to set the _isMultiInstance_ attribute to _True_.
+Implementing multi-instance support in the core permits converting any compliant
+plugin to a multi-instance plugin without requiring any significant change to 
+the plugin script itself; multi-instance support can be activated in any plugin 
+by adding a single line to the plugin class definition to set the 
+_isMultiInstance_ attribute to _True_.
 
 The following plugins have been updated to add multi-instance support:
 
