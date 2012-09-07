@@ -151,14 +151,14 @@ yum install PyMunin
 					
 This will install _pymunin_ and _pysysinfo_ in <i>Python</i> site packages.
 The plugins will be unpacked as console scripts into the install _bin_ directory. 
-Each of the scripts will be prefixed with _pymunin-_ (ex. _pymunin-apachestats_) 
+Each of the scripts will be prefixed with _pymunin-_ (ex. _pymunin-apachestats_ ) 
 to avoid name collisions with other binaries.
 The location will be _/usr/local/bin/_ if installed globally or 
 $VIRTUAL_ENV/bin if installed 
 with [virtualenv](http://www.virtualenv.org/).
 
 The plugins will automatically be installed in _Munin Plugins_ directory 
-(ex. _/usr/share/munin/plugins_), if the installation process is executed with a 
+(ex. _/usr/share/munin/plugins_ ), if the installation process is executed with a 
 privileged user and the _pymunin-_ prefix will be dropped in the process.
 
 If the installation process fails while copying the plugin scripts 
@@ -167,7 +167,7 @@ script will be  created for copying the plugins from the _bin_ directory to
 _/usr/share/munin/plugins_.
 
 In certain cases the install script might fail to determine the path for 
-installing the _Munin Plugins_ (ex. _/usr/share/munin/plugins_). 
+installing the _Munin Plugins_ (ex. _/usr/share/munin/plugins_ ). 
 The _MUNIN_PLUGIN_DIR_  environment variable could be set before executing the 
 setup script to force the installation of plugins in a specific directory.
 
@@ -175,9 +175,9 @@ setup script to force the installation of plugins in a specific directory.
 #### Manual Installation ####
 
 * The _pymunin_ and _pysysinfo_ directories should be placed in _Python_ 
-  search path or in the _Munin Plugins_ directory (ex. /usr/share/munin/plugins_).
+  search path or in the _Munin Plugins_ directory (ex. /usr/share/munin/plugins_ ).
 * Copy the plugin scripts in the directory _pymunin/plugins_ to 
-  the _Munin Plugins_ directory (ex. _/usr/share/munin/plugins_) after removing 
+  the _Munin Plugins_ directory (ex. _/usr/share/munin/plugins_ ) after removing 
   the file extension '_py_'.
 
 
@@ -189,18 +189,53 @@ Configuration
 
 Enable the plugins just like the standard plugins by creating 
 symbolic links in the _Munin Plugins Configuration Directory_ 
-(_/etc/munin/plugins_).
+( _/etc/munin/plugins_ ) pointing to actual plugins scripts
+in _/usr/share/munin/plugins_.
 
 ### Configuration of the Plugins ###
 
 Configuration files for plugins can be created in the 
 _Munin Plugins Configuration Directory_ 
-(_/etc/munin/plugin-conf.d_).
+( _/etc/munin/plugin-conf.d_ ).
 
 The environment variables used by the plugin scripts are documented in the 
 individual web pages for the plugins and in the header part of the plugin 
 modules in _pymunin/plugins_.
 
+### Configuration of Multiple Instances of Plugins ###
+
+The configuration of multiple instances of plugins will be illustrated with a 
+simple example for monitoring two instances of _Apache Web Servers_ from the 
+same node.
+
+Multiple symbolic links with different names pointing to the same plugin script 
+in are created in _/usr/share/munin/plugins_ is created in the 
+_Munin Plugins Configuration Directory_ ( _/etc/munin/plugins_ ).
+
+Example:
+
+    /etc/munin/plugins/apachestats_web1 -> /usr/share/munin/plugins/apachestats
+    /etc/munin/plugins/apachestats_web1 -> /usr/share/munin/plugins/apachestats
+
+Independent configuration files ( _/etc/munin/plugin-conf.d/apachestats\_web1_ 
+and _/etc/munin/plugin-conf.d/apachestats\_web2_ ) are created for the two 
+instances.
+
+_/etc/munin/plugin-conf.d/apachestats\_web1_ :
+
+    [apachestats_web1]
+      env.host 192.168.0.1
+      env.port 80
+      env.instance_name web1
+      env.instance_label WebSrv1
+
+_/etc/munin/plugin-conf.d/apachestats\_web2_ :
+
+    [apachestats_web2]
+      env.host 192.168.0.2
+      env.port 80
+      env.instance_name web2
+      env.instance_label WebSrv2
 
 
 Troubleshooting
@@ -240,7 +275,7 @@ Development
 
 The plugins consist of the following components:
 
-* The _pymunin_ module (_plugins/pymunin_) implements the base classes for 
+* The _pymunin_ module ( _plugins/pymunin_ ) implements the base classes for 
 developing Munin plugins.
 	* Munin Plugins can be created by subclassing the _MuninPlugin_ class.
 	* Each plugin contains one or more graphs implemented by _MuninGraph_ class 
