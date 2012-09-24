@@ -215,7 +215,7 @@ _Munin Plugins Configuration Directory_ ( _/etc/munin/plugins_ ).
 Example:
 
     /etc/munin/plugins/apachestats_web1 -> /usr/share/munin/plugins/apachestats
-    /etc/munin/plugins/apachestats_web1 -> /usr/share/munin/plugins/apachestats
+    /etc/munin/plugins/apachestats_web2 -> /usr/share/munin/plugins/apachestats
 
 Independent configuration files ( _/etc/munin/plugin-conf.d/apachestats\_web1_ 
 and _/etc/munin/plugin-conf.d/apachestats\_web2_ ) are created for the two 
