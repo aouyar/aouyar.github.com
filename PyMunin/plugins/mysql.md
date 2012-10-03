@@ -7,7 +7,7 @@ prjname: PyMunin
 prjdesc: Python Module for developing Munin Multigraph Monitoring Plugins
 munin_plugin_name: mysqlstats
 munin_plugin_short: MySQL Database Server Plugin
-munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring PostgreSQL 
+munin_plugin_long: PyMunin Multigraph Munin Plugin for monitoring MySQL 
                    Database Server.
 munin_plugin_multigraph: true
 munin_plugin_multiinstance: true
