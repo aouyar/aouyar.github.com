@@ -39,7 +39,7 @@ munin_plugin_vars:
       desc: "User in case authentication is required for access to PHP FPM Status page."
     - name: password
       desc: "Password in case authentication is required for access to PHP FPM Status page."
-    - name: statuspath
+    - name: monpath
       desc: |
             PHP FPM status page path relative to Document Root.
             (Default: fpm_status.php)
