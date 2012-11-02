@@ -68,6 +68,10 @@ munin_plugin_vars:
       desc: |
             Memcached Server Port
             (11211 by default.)
+    - name: socket_file
+      desc: |
+            Memcached named socket file.
+            (The host and port arguments are ignored and UNIX socket is used for connecting to the server.)
     - name: include_graphs
       desc: |
             Comma separated list of enabled graphs.
