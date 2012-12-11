@@ -38,7 +38,7 @@ munin_plugin_vars:
             Redis Server Host.
             (127.0.0.1 by default.)
     - name: port
-    - desc: |
+      desc: |
             Redis Server Port.
             (6379  by default.)
     - name: db
