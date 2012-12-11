@@ -6,14 +6,14 @@ description: |
              Plugins for Apache, Tomcat, Asterisk, Disk I/O, Disk Usage, 
              FreeSWITCH, Lighttpd, Memcached, MySQL, Network Interfaces, 
              Network Connections, Nginx, NTP, PHP APC, PHP FPM, PostgreSQL,
-             Rackspace Cloudfiles, Varnish Cache, 
+             Rackspace Cloudfiles, Redis Server, Varnish Cache, 
              System CPU and Memory Utilization, VM Paging and Swapping, etc.
 keywords: |
           PyMunin, Munin, Plugin, Python, Multigraph, Monitoring, Apache, 
           Tomcat, PHP, APC, FPM, Asterisk, FreeSWITCH, Lighttpd, Memcached, 
           MySQL, Network, Interfaces, Connections, Nginx, NTP, PostgreSQL,
-          Rackspace, Cloud, Varnish, Cache, System, CPU, Memory, Disk Usage, 
-          Disk I/O, Processes, Forks, Interrupts
+          Rackspace, Cloud, Redis, Varnish, Cache, System, CPU, Memory, 
+          Disk Usage, Disk I/O, Processes, Forks, Interrupts
 prjname: PyMunin
 prjdesc: Python Module for developing Munin Multigraph Monitoring Plugins
 prjpypi: true
@@ -91,6 +91,7 @@ _PyMunin_:
 * [PostgreSQL Database Server](./plugins/postgresql.html)
 * [Processes and Threads](./plugins/process.html)
 * [Rackspace Cloud](./plugins/rackspace.html)
+* [Redis Server](./plugins/redis.html)
 * [System Resources](./plugins/system.html)
 * [Sangoma Wanpipe Telephony Interfaces](./plugins/wanpipe.html)
 * [Varnish Cache Web Application Accelerator](./plugins/varnish.html)
