@@ -61,9 +61,7 @@ munin_plugin_vars:
             (All graphs enabled by default.)
     - name: exclude_graphs
       desc: Comma separated list of disabled graphs.   
-
-
-    
+  
 ---
 
 {% include munin_plugin_content.inc %}

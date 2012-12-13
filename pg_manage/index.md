@@ -18,7 +18,7 @@ hnav:
     - Usage
     - License
     - TODO
-	
+    
 ---
 
 
@@ -66,19 +66,19 @@ the _secondary_ (_standby_) server:
 
 <table class="fitwidth">
 <tr>
-	<th>Role</th>
-	<th>Hostname</th>
-	<th>IP</th>
+    <th>Role</th>
+    <th>Hostname</th>
+    <th>IP</th>
 </tr>
 <tr>
-	<td>Primary</td>
-	<td>node1</td>
-	<td>10.0.0.1</td>
+    <td>Primary</td>
+    <td>node1</td>
+    <td>10.0.0.1</td>
 </tr>
 <tr>
-	<td>Secondary</td>
-	<td>node2</td>
-	<td>10.0.0.2</td>
+    <td>Secondary</td>
+    <td>node2</td>
+    <td>10.0.0.2</td>
 </tr>
 </table>
 
@@ -130,9 +130,9 @@ The _postgres_ database user in each _PostgreSQL Server_ must be configured with
 a password and must have _replication_ privileges on the other server. Example
 entries for _pg\_hba.conf_ configuration file:
 
-	# Streaming Replication
-	host    replication     postgres        10.0.0.1/32             md5
-	host    replication     postgres        10.0.0.2/32             md5
+    # Streaming Replication
+    host    replication     postgres        10.0.0.1/32             md5
+    host    replication     postgres        10.0.0.2/32             md5
 
 
 You can check the sample _pg\_hba.conf_ file in the _conf_ folder for a sample
@@ -161,47 +161,47 @@ _CentOS 5_.
 
 <table>
 <tr>
-	<th>Option</th>
-	<th>Description</th>
+    <th>Option</th>
+    <th>Description</th>
 </tr>
 <tr>
-	<td>SERVERTYPE</td>
-	<td>
-		Server type: <i>PRIMARY</i> for primary server, <i>SECONDARY</i> for 
-		secondary (standby) server.
-	</td>
+    <td>SERVERTYPE</td>
+    <td>
+        Server type: <i>PRIMARY</i> for primary server, <i>SECONDARY</i> for 
+        secondary (standby) server.
+    </td>
 </tr>
 <tr>
-	<td>PRIMARYHOST</td>
-	<td>IP Address of primary server.</td>
+    <td>PRIMARYHOST</td>
+    <td>IP Address of primary server.</td>
 </tr>
 <tr>
-	<td>SECONDARYHOST</td>
-	<td>IP Address of secondary server.</td>
+    <td>SECONDARYHOST</td>
+    <td>IP Address of secondary server.</td>
 </tr>
 <tr>
-	<td>BACKUPURLHOT</td>
-	<td>URL designating location for Hot Backups on Backup Server.</td>
+    <td>BACKUPURLHOT</td>
+    <td>URL designating location for Hot Backups on Backup Server.</td>
 </tr>
 <tr>
-	<td>BACKUPURLARCH</td>
-	<td>URL designating location for Archive Logs on Backup Server.</td>
+    <td>BACKUPURLARCH</td>
+    <td>URL designating location for Archive Logs on Backup Server.</td>
 </tr>
 <tr>
-	<td>BACKUPURLDUMP</td>
-	<td>URL designating location for Database Dumps on Backup Server.</td>
+    <td>BACKUPURLDUMP</td>
+    <td>URL designating location for Database Dumps on Backup Server.</td>
 </tr>
 <tr>
-	<td>BACKUPDIRHOT</td>
-	<td>Subdirectory at backup location for Hot Backups.</td>
+    <td>BACKUPDIRHOT</td>
+    <td>Subdirectory at backup location for Hot Backups.</td>
 </tr>
 <tr>
-	<td>BACKUPDIRARCH</td>
-	<td>Subdirectory at backup location for Archive Logs.</td>
+    <td>BACKUPDIRARCH</td>
+    <td>Subdirectory at backup location for Archive Logs.</td>
 </tr>
 <tr>
-	<td>BACKUPDIRDUMP</td>
-	<td>Subdirectory at backup location for Database Dumps.</td>
+    <td>BACKUPDIRDUMP</td>
+    <td>Subdirectory at backup location for Database Dumps.</td>
 </tr>
 </table>
 
@@ -210,33 +210,33 @@ _CentOS 5_.
 
 <table>
 <tr>
-	<th>Type</th>
-	<th>Example</th>
-	<th>Description</th>
+    <th>Type</th>
+    <th>Example</th>
+    <th>Description</th>
 </tr>
 <tr>
-	<td>
-		nfs<br>
-		cifs
-	</td>
-	<td>
-		nfs:///home/nas<br>
-		cifs:///home/nas
-	</td>
-	<td>Mount point for remote filesystem.</td>
+    <td>
+        nfs<br>
+        cifs
+    </td>
+    <td>
+        nfs:///home/nas<br>
+        cifs:///home/nas
+    </td>
+    <td>Mount point for remote filesystem.</td>
 </tr>
 <tr>
-	<td>file</td>
-	<td>file:///home/nas</td>
-	<td>Mount point for local filesystem.</td>
+    <td>file</td>
+    <td>file:///home/nas</td>
+    <td>Mount point for local filesystem.</td>
 </tr>
 <tr>
-	<td>ssh</td>
-	<td>ssh://user@10.0.0.100/backup</td>
-	<td>
-		Specifies the IP of a remote SSH server, the user to be used for
-		passwordless SSH logins to this server and the directory on server.
-	</td>
+    <td>ssh</td>
+    <td>ssh://user@10.0.0.100/backup</td>
+    <td>
+        Specifies the IP of a remote SSH server, the user to be used for
+        passwordless SSH logins to this server and the directory on server.
+    </td>
 </tr>
 </table>
 
@@ -246,31 +246,31 @@ _CentOS 5_.
 You can check the sample _pg\_manage.conf.primary_ file in the _conf_ folder for 
 a  sample configuration file for the _primary_ server:
 
-	SERVERTYPE=PRIMARY              # Server Type (PRIMARY or SECONDARY)
-	PRIMARYHOST=10.0.0.1            # Primary Server IP in Warm Standby Setup.
-	SECONDARYHOST=10.0.0.2          # Secondary Server IP in Warm Standby Setup.
-	
-	BACKUPURLHOT=cifs:///home/nas   # Destination for Hot Backups
-	BACKUPURLARCH=cifs:///home/nas  # Destination for Archive Logs
-	BACKUPURLDUMP=cifs:///home/nas  # Destination for Dumps
-	BACKUPDIRHOT=pg_hotbackup
-	BACKUPDIRARCH=pg_archlog
-	BACKUPDIRDUMP=pg_export
+    SERVERTYPE=PRIMARY              # Server Type (PRIMARY or SECONDARY)
+    PRIMARYHOST=10.0.0.1            # Primary Server IP in Warm Standby Setup.
+    SECONDARYHOST=10.0.0.2          # Secondary Server IP in Warm Standby Setup.
+    
+    BACKUPURLHOT=cifs:///home/nas   # Destination for Hot Backups
+    BACKUPURLARCH=cifs:///home/nas  # Destination for Archive Logs
+    BACKUPURLDUMP=cifs:///home/nas  # Destination for Dumps
+    BACKUPDIRHOT=pg_hotbackup
+    BACKUPDIRARCH=pg_archlog
+    BACKUPDIRDUMP=pg_export
 
 
 You can check the sample _pg\_manage.conf.secondary_ file in the _conf_ folder 
 for a  sample configuration file for the _secondary_ server:
 
-	SERVERTYPE=SECONDARY            # Server Type (PRIMARY or SECONDARY)
-	PRIMARYHOST=10.0.0.1            # Primary Server IP in Warm Standby Setup.
-	SECONDARYHOST=10.0.0.2          # Secondary Server IP in Warm Standby Setup.
-	
-	BACKUPURLHOT=cifs:///home/nas   # Destination for Hot Backups
-	BACKUPURLARCH=cifs:///home/nas  # Destination for Archive Logs
-	BACKUPURLDUMP=cifs:///home/nas  # Destination for Dumps
-	BACKUPDIRHOT=pg_hotbackup
-	BACKUPDIRARCH=pg_archlog
-	BACKUPDIRDUMP=pg_export
+    SERVERTYPE=SECONDARY            # Server Type (PRIMARY or SECONDARY)
+    PRIMARYHOST=10.0.0.1            # Primary Server IP in Warm Standby Setup.
+    SECONDARYHOST=10.0.0.2          # Secondary Server IP in Warm Standby Setup.
+    
+    BACKUPURLHOT=cifs:///home/nas   # Destination for Hot Backups
+    BACKUPURLARCH=cifs:///home/nas  # Destination for Archive Logs
+    BACKUPURLDUMP=cifs:///home/nas  # Destination for Dumps
+    BACKUPDIRHOT=pg_hotbackup
+    BACKUPDIRARCH=pg_archlog
+    BACKUPDIRDUMP=pg_export
 
 
 Usage
@@ -281,108 +281,108 @@ Usage
 
 #### pg\_manage.pl ####
 
-	$ pg_manage.pl -h
-	Help on Usage
-	usage: pg_manage.pl -h
-	
-	Send Archive Log to Backup Server / Retrieve Archive Log from Backup Server
-	usage: pg_manage.pl [-n] [-d] [-q] -c xlog_archive [-l] -f FILE -p PATH
-	usage: pg_manage.pl [-n] [-d] [-q] -c xlog_restore [-l] [-t N] [-i SECS] 
-	       [-I SECS] [-w SECS] -f FILE -p PATH [-r FILE]
-	
-	Create / Remove Trigger File
-	usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_fast
-	usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_smart
-	usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_cleanup
-	
-	Initialize Database
-	usage: pg_manage.pl [-n] [-d] [-q] -c db_destroy
-	
-	Hot Backup / Restore Database
-	usage: pg_manage.pl [-n] [-d] [-q] -c db_hot_backup
-	usage: pg_manage.pl [-n] [-d] [-q] -c db_restore_backup -s HOST -b BACKUPFILE
-	
-	Dump (Export) / Restore (Import) Database
-	usage: pg_manage.pl [-n] [-d] [-q] -c db_export -D DATABASE
-	usage: pg_manage.pl [-n] [-d] [-q] -c db_import [-j N] -s HOST -b BACKUPFILE
-	
-	Initial Sync of Servers: Primary -> Secondary
-	Run command only on secondary server.
-	usage: pg_manage.pl [-n] [-d] [-q] -c db_initial_sync
-	
-	Check Primary. Return 0 if server is primary
-	usage: pg_manage.pl [-n] [-d] [-q] -c check_primary
-	
-	Check Secondary. Return 0 if server is secondary
-	usage: pg_manage.pl [-n] [-d] [-q] -c check_secondary
+    $ pg_manage.pl -h
+    Help on Usage
+    usage: pg_manage.pl -h
+    
+    Send Archive Log to Backup Server / Retrieve Archive Log from Backup Server
+    usage: pg_manage.pl [-n] [-d] [-q] -c xlog_archive [-l] -f FILE -p PATH
+    usage: pg_manage.pl [-n] [-d] [-q] -c xlog_restore [-l] [-t N] [-i SECS] 
+           [-I SECS] [-w SECS] -f FILE -p PATH [-r FILE]
+    
+    Create / Remove Trigger File
+    usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_fast
+    usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_smart
+    usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_cleanup
+    
+    Initialize Database
+    usage: pg_manage.pl [-n] [-d] [-q] -c db_destroy
+    
+    Hot Backup / Restore Database
+    usage: pg_manage.pl [-n] [-d] [-q] -c db_hot_backup
+    usage: pg_manage.pl [-n] [-d] [-q] -c db_restore_backup -s HOST -b BACKUPFILE
+    
+    Dump (Export) / Restore (Import) Database
+    usage: pg_manage.pl [-n] [-d] [-q] -c db_export -D DATABASE
+    usage: pg_manage.pl [-n] [-d] [-q] -c db_import [-j N] -s HOST -b BACKUPFILE
+    
+    Initial Sync of Servers: Primary -> Secondary
+    Run command only on secondary server.
+    usage: pg_manage.pl [-n] [-d] [-q] -c db_initial_sync
+    
+    Check Primary. Return 0 if server is primary
+    usage: pg_manage.pl [-n] [-d] [-q] -c check_primary
+    
+    Check Secondary. Return 0 if server is secondary
+    usage: pg_manage.pl [-n] [-d] [-q] -c check_secondary
 
 
 #### pg\_check\_replication.sh ####
 
-	$ pg_check_replication.sh 
-	PRIMARY: node1
-	 pg_current_xlog_location 
-	--------------------------
-	 73A/27403A08
-	(1 row)
-	
-	
-	SECONDARY: node2
-	 pg_last_xlog_receive_location | pg_last_xlog_replay_location 
-	-------------------------------+------------------------------
-	 73A/27403A08                  | 73A/27403A08
-	(1 row)
+    $ pg_check_replication.sh 
+    PRIMARY: node1
+     pg_current_xlog_location 
+    --------------------------
+     73A/27403A08
+    (1 row)
+    
+    
+    SECONDARY: node2
+     pg_last_xlog_receive_location | pg_last_xlog_replay_location 
+    -------------------------------+------------------------------
+     73A/27403A08                  | 73A/27403A08
+    (1 row)
 
 
 
 ### pg\_manage.pl - Common Options ###
 
-	-h                 Print help text.
-	-d                 Debug mode.
-	-q                 Quiet mode. 
-	-n                 Dry-run mode. Simulate operations instead of executing them.
-	                   Used for testing operations before executing them.
-	-c OPER            Operation to be executed. Must be one of the following:
-	                     xlog_archive       Copy Transaction Log File to Backup 
-	                                        Server. Used in archive_command 
-	                                        option in the  configuration file 
-	                                        postgresql.conf for enabling Archive 
-	                                        Logging in PostgreSQL Database.
-	                     xlog_restore       Restore a Transaction Log File from 
-	                                        Backup Server. Used in restore_command 
-	                                        option in the configuration file 
-	                                        recovery.conf for enabling recovery 
-	                                        using Archive Logs in PostgreSQL 
-	                                        Database. Used for Point-in-Time 
-	                                        Recovery.
-	                     db_destroy         Delete data directories to prepare 
-	                                        the PostgreSQL Database Server for 
-	                                        recovery. 
-	                     db_hot_backup      Hot Backup of the PostgreSQL Database 
-	                                        Server to the Backup Server. 
-	                     db_restore_backup  Restore PostgreSQL Database Server 
-	                                        from Hot Backup stored in Backup Server. 
-	                     db_export          Generates a compressed dump (export) 
-	                                        of a database at the Backup Server. 
-	                     db_import          Restores a database from a compressed 
-	                                        dump (export) of a database stored at 
-	                                        the Backup Server. 
-	                     db_initial_sync    Initial sync of data from primary 
-	                                        server on secondary server. (Must be 
-	                                        executed only on secondary server.)
-	                     check_primary      Check if the server is configured as 
-	                                        primary server.
-	                     check_secondary    Check if the server is configured as 
-	                                        secondary server. 
-	                     recovery_trigger_fast     Generate Trigger File for 
-	                                               finalizing the recovery process 
-	                                               as soon as possible.
-	                     recovery_trigger_smart    Generate Trigger File for 
-	                                               finalizing the recovery process 
-	                                               after consuming all available 
-	                                               Archive Log files. 
-	                     recovery_trigger_cleanup  Remove any existing Trigger 
-	                                               Files.
+    -h                 Print help text.
+    -d                 Debug mode.
+    -q                 Quiet mode. 
+    -n                 Dry-run mode. Simulate operations instead of executing them.
+                       Used for testing operations before executing them.
+    -c OPER            Operation to be executed. Must be one of the following:
+                         xlog_archive       Copy Transaction Log File to Backup 
+                                            Server. Used in archive_command 
+                                            option in the  configuration file 
+                                            postgresql.conf for enabling Archive 
+                                            Logging in PostgreSQL Database.
+                         xlog_restore       Restore a Transaction Log File from 
+                                            Backup Server. Used in restore_command 
+                                            option in the configuration file 
+                                            recovery.conf for enabling recovery 
+                                            using Archive Logs in PostgreSQL 
+                                            Database. Used for Point-in-Time 
+                                            Recovery.
+                         db_destroy         Delete data directories to prepare 
+                                            the PostgreSQL Database Server for 
+                                            recovery. 
+                         db_hot_backup      Hot Backup of the PostgreSQL Database 
+                                            Server to the Backup Server. 
+                         db_restore_backup  Restore PostgreSQL Database Server 
+                                            from Hot Backup stored in Backup Server. 
+                         db_export          Generates a compressed dump (export) 
+                                            of a database at the Backup Server. 
+                         db_import          Restores a database from a compressed 
+                                            dump (export) of a database stored at 
+                                            the Backup Server. 
+                         db_initial_sync    Initial sync of data from primary 
+                                            server on secondary server. (Must be 
+                                            executed only on secondary server.)
+                         check_primary      Check if the server is configured as 
+                                            primary server.
+                         check_secondary    Check if the server is configured as 
+                                            secondary server. 
+                         recovery_trigger_fast     Generate Trigger File for 
+                                                   finalizing the recovery process 
+                                                   as soon as possible.
+                         recovery_trigger_smart    Generate Trigger File for 
+                                                   finalizing the recovery process 
+                                                   after consuming all available 
+                                                   Archive Log files. 
+                         recovery_trigger_cleanup  Remove any existing Trigger 
+                                                   Files.
 
 
 
@@ -390,16 +390,16 @@ Usage
 
 Compresses _Transaction Log_ files and copies it to the _Backup Server_.
 
-	Usage: pg_manage.pl [-n] [-d] [-q] -c xlog_archive [-l] -f FILE -p PATH 
-	
-	  -l       Generate log file with filename archive-DD.log in the log file 
-	           directory of PostgreSQL Server. (The log file directory for 
-	           PostgreSQL version 9.0 on RHEL / CentOS is by default 
-	           /var/lib/pgsql/9.0/data/pg_log.) 
-	  -f FILE  Filename for Transaction Log File. 
-	  -p PATH  Path for Transaction Log Files directory. The path for 
-	           PostgreSQL 9.0 on RHEL / CentOS is by default 
-	           /var/lib/pgsql/9.0/data/pg_xlog.
+    Usage: pg_manage.pl [-n] [-d] [-q] -c xlog_archive [-l] -f FILE -p PATH 
+    
+      -l       Generate log file with filename archive-DD.log in the log file 
+               directory of PostgreSQL Server. (The log file directory for 
+               PostgreSQL version 9.0 on RHEL / CentOS is by default 
+               /var/lib/pgsql/9.0/data/pg_log.) 
+      -f FILE  Filename for Transaction Log File. 
+      -p PATH  Path for Transaction Log Files directory. The path for 
+               PostgreSQL 9.0 on RHEL / CentOS is by default 
+               /var/lib/pgsql/9.0/data/pg_xlog.
 
 
 The command is specifically designed to be used in _archive\_command_ option of 
@@ -408,9 +408,9 @@ _PostgreSQL Database Server_.
 
 Sample fragment from _postgresql.conf_:
 
-	archive_mode = on 
-	archive_command = '/usr/local/bin/pg_manage.pl -c xlog_archive -l -p "%p" 
-	archive_timeout = 900 
+    archive_mode = on 
+    archive_command = '/usr/local/bin/pg_manage.pl -c xlog_archive -l -p "%p" 
+    archive_timeout = 900 
 
 
 
@@ -419,31 +419,31 @@ Sample fragment from _postgresql.conf_:
 Retrieves compressed _Transaction Log_ files from _Backup Server_ and uncompresses
 the files.
 
-	Usage: pg_manage.pl [-n] [-d] [-q] -c xlog_restore [-l] [-t N] [-i SECS] 
-	       [-I SECS]  [-w SECS] -f FILE -p PATH [-r FILE]
-	
+    Usage: pg_manage.pl [-n] [-d] [-q] -c xlog_restore [-l] [-t N] [-i SECS] 
+           [-I SECS]  [-w SECS] -f FILE -p PATH [-r FILE]
+    
       -l       Generate log file with filename restore-DD.log in the log file 
-	           directory of PostgreSQL Server. (The log file directory for 
-	           PostgreSQL version 9.0 on RHEL / CentOS is by default 
-	           /var/lib/pgsql/9.0/data/pg_log.) 
-	  -f FILE  Filename for Transaction Log File. 
-	  -p PATH  Path for Transaction Log Files directory. The path for 
-	           PostgreSQL 9.0 on RHEL / CentOS is by default 
-	           /var/lib/pgsql/9.0/data/pg_xlog.
+               directory of PostgreSQL Server. (The log file directory for 
+               PostgreSQL version 9.0 on RHEL / CentOS is by default 
+               /var/lib/pgsql/9.0/data/pg_log.) 
+      -f FILE  Filename for Transaction Log File. 
+      -p PATH  Path for Transaction Log Files directory. The path for 
+               PostgreSQL 9.0 on RHEL / CentOS is by default 
+               /var/lib/pgsql/9.0/data/pg_xlog.
       -r FILE  Filename for the last Transaction Log file to preserve for
                consistency of PostgreSQL Database.
-	  -t N     Number of times to retry retrieval of a Transaction Log File from
-	           Backup Server. (Default: 3)
-	  -i SECS  Time (seconds) to wait in seconds between retries for retrieval of 
-	           a Transaction Log File from Backup Server.  (Default: 10 seconds)
-	  -I SECS  Time (seconds) to wait between revisions of the Backup Server for
-	           new Archive Log Files. (Default: 60 seconds)
-	  -w SECS  Total time (seconds) to wait for the availability of a new 
-	           Archive Log File on the Backup Server. (Default: 0 seconds)
-	           End of recovery process will be triggered once the total time
-	           for waiting for new Archive Log files runs out. 
-	           The value 0 implies waiting indefinitely and may be used in
-	           replication setups with Log Shipping.
+      -t N     Number of times to retry retrieval of a Transaction Log File from
+               Backup Server. (Default: 3)
+      -i SECS  Time (seconds) to wait in seconds between retries for retrieval of 
+               a Transaction Log File from Backup Server.  (Default: 10 seconds)
+      -I SECS  Time (seconds) to wait between revisions of the Backup Server for
+               new Archive Log Files. (Default: 60 seconds)
+      -w SECS  Total time (seconds) to wait for the availability of a new 
+               Archive Log File on the Backup Server. (Default: 0 seconds)
+               End of recovery process will be triggered once the total time
+               for waiting for new Archive Log files runs out. 
+               The value 0 implies waiting indefinitely and may be used in
+               replication setups with Log Shipping.
 
 
 The command is specifically designed to be used in _restore\_command_ option of 
@@ -481,18 +481,18 @@ Sample _recovery.conf_ file for _Streaming Replication_:
 
 Generate _Trigger File_ for finalizing the recovery process as soon as possible:
 
-	Usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_fast
+    Usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_fast
 
 
 Generate _Trigger File_ for finalizing the recovery process after consuming all 
 available Archive Log files: 
 
-	Usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_smart
+    Usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_smart
 
 
 Remove any existing _Trigger Files_:
 
-	Usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_cleanup
+    Usage: pg_manage.pl [-n] [-d] [-q] -c recovery_trigger_cleanup
 
 
 
@@ -500,7 +500,7 @@ Remove any existing _Trigger Files_:
 
 Delete data directories to prepare the PostgreSQL Database Server for recovery.
 
-	Usage: pg_manage.pl [-n] [-d] [-q] -c db_destroy
+    Usage: pg_manage.pl [-n] [-d] [-q] -c db_destroy
 
 <p class="box warning" markdown="1">
 The command deletes data directories of _PostgreSQL Server_. In case there are 
@@ -516,7 +516,7 @@ executes a _Cold Backup_ if the database is _offline_. The backup is stored in
 the _Backup Server_ in _tgz_ format and contains a compressed copy of the data
 files of the database.
 
-	Usage: pg_manage.pl [-n] [-d] [-q] -c db_hotbackup
+    Usage: pg_manage.pl [-n] [-d] [-q] -c db_hotbackup
 
 <p class="box warning" markdown="1">
 Successful recovery from a _Hot Backup_ depends on the availability of
@@ -541,7 +541,7 @@ stored on the _Backup Server_.
 Command that can be executed to recover from a _Hot_ / _Cold_ backup
 of the _PostgreSQL Server_ _node1_:
 
-	$ pg_manage.pl -c db_restore_backup -s node1 -b hotbackup-node1-2010-10-08.tgz 
+    $ pg_manage.pl -c db_restore_backup -s node1 -b hotbackup-node1-2010-10-08.tgz 
 
 
 <p class="box warning" markdown="1">
@@ -641,13 +641,13 @@ _Archive Logs_ or also stored in the _Backup Server_.
 The _check\_primary_ command returns _0_ ( _true_ ) if the server is configured
 as _Primary Server_, _1_ ( _false_ ) otherwise.
 
-	Usage: pg_manage.pl [-n] [-d] [-q] -c check_primary
+    Usage: pg_manage.pl [-n] [-d] [-q] -c check_primary
 
 
 The _check\_secondary_ command returns _0_ ( _true_ ) if the server is configured
 as _Secondary Server_, _1_ ( _false_ ) otherwise.
 
-	Usage: pg_manage.pl [-n] [-d] [-q] -c check_primary
+    Usage: pg_manage.pl [-n] [-d] [-q] -c check_primary
 
 
 

@@ -31,7 +31,7 @@ hnav:
     - Troubleshooting
     - Credits
     - License
-	
+    
 ---
 
 Updates
@@ -172,13 +172,13 @@ be download from the project page of the
 
 Installation
 ------------
-	    
+        
 The binary packages of the original version of the code can be installed using 
 the packaging tools of the distribution.
 
 Once the source code is cloned or downloaded it can be installed as follows:
 
-	$ make all install
+    $ make all install
 
 
 Configuration
@@ -199,127 +199,127 @@ Usage
 
 #### Usage ####
 
-	$ mactelnet -h
-	
-	Usage: mactelnet <MAC|identity> [-v] [-h] [-q] [-n] [-l] [-S] [-P <port>]
-	       [-t <timeout>] [-u <user>] [-p <pass>] [-c <path>] [-U <user>]
-	
-	Parameters:
-	  MAC           MAC-Address of the RouterOS/mactelnetd device. Use mndp to 
-	                discover it.
-	  identity      The identity/name of your destination device. Uses MNDP 
-	                protocol to find it.
-	  -l            List/Search for routers nearby. (using MNDP)
-	  -n            Do not use broadcast packets. Less insecure but requires root 
-	                privileges.
-	  -t <timeout>  Amount of seconds to wait for a response on each interface.
-	  -u <user>     Specify username on command line.
-	  -p <pass>     Specify password on command line.
-	  -U <user>     Drop privileges by switching to user, when the command is
-	                run as a privileged user in conjunction with the -n option.
-	  -S            Use MAC-SSH instead of MAC-Telnet. (Implies -F)
-	                Forward SSH connection through MAC-Telnet and launch SSH client.
-	  -F            Forward connection through of MAC-Telnet without launching the 
-	                SSH Client.
-	  -P <port>     Local TCP port for forwarding SSH connection.
-	                (If not specified, port 2222 by default.)
-	  -c <path>     Path for ssh client executable. (Default: /usr/bin/ssh)
-	  -q            Quiet mode.
-	  -v            Print version and exit.
-	  -h            Print help and exit.
-	
-	All arguments after '--' will be passed to the ssh client command.
+    $ mactelnet -h
+    
+    Usage: mactelnet <MAC|identity> [-v] [-h] [-q] [-n] [-l] [-S] [-P <port>]
+           [-t <timeout>] [-u <user>] [-p <pass>] [-c <path>] [-U <user>]
+    
+    Parameters:
+      MAC           MAC-Address of the RouterOS/mactelnetd device. Use mndp to 
+                    discover it.
+      identity      The identity/name of your destination device. Uses MNDP 
+                    protocol to find it.
+      -l            List/Search for routers nearby. (using MNDP)
+      -n            Do not use broadcast packets. Less insecure but requires root 
+                    privileges.
+      -t <timeout>  Amount of seconds to wait for a response on each interface.
+      -u <user>     Specify username on command line.
+      -p <pass>     Specify password on command line.
+      -U <user>     Drop privileges by switching to user, when the command is
+                    run as a privileged user in conjunction with the -n option.
+      -S            Use MAC-SSH instead of MAC-Telnet. (Implies -F)
+                    Forward SSH connection through MAC-Telnet and launch SSH client.
+      -F            Forward connection through of MAC-Telnet without launching the 
+                    SSH Client.
+      -P <port>     Local TCP port for forwarding SSH connection.
+                    (If not specified, port 2222 by default.)
+      -c <path>     Path for ssh client executable. (Default: /usr/bin/ssh)
+      -q            Quiet mode.
+      -v            Print version and exit.
+      -h            Print help and exit.
+    
+    All arguments after '--' will be passed to the ssh client command.
 
 
 #### Examples ####
 
 Establish standard MAC-Telnet session with remote box:
 
-	$ mactelnet aa:bb:cc:dd:ee:ff
+    $ mactelnet aa:bb:cc:dd:ee:ff
 
 Forward local port 4001:
 
-	$ mactelnet -F -P 4001 aa:bb:cc:dd:ee:ff
+    $ mactelnet -F -P 4001 aa:bb:cc:dd:ee:ff
 
 Establish SSH connection with remote box:
 
-	$ mactelnet -S -u root aa:bb:cc:dd:ee:ff
-	
+    $ mactelnet -S -u root aa:bb:cc:dd:ee:ff
+    
 Establish SSH connection with remote box, forwarding additional ports using SSH Port Forwarding:
 
-	$ mactelnet -S -u root aa:bb:cc:dd:ee:ff -- -L8080:127.0.0.1:80 -L443:127.0.0.1:8443
+    $ mactelnet -S -u root aa:bb:cc:dd:ee:ff -- -L8080:127.0.0.1:80 -L443:127.0.0.1:8443
 
 
 ### mactelnetd ###
 
 #### Usage ####
 
-	$ mactelnetd -h
-	
-	Usage: mactelnetd [-v] [-h] [-n] [-f] [-S] [-P <port>] [-U <user>]
-	
-	Parameters:
-	  -f         Run process in foreground.
-	  -n         Do not use broadcast packets. Just a tad less insecure.
-	  -S / -F    Forwarding of TCP connections through  MAC-Telnet protocol,
-	             instead of using the standard MAC-Telnet remote terminal.
-	  -P <port>  Local TCP port used for forwarding connections to SSH Server.
-	             (If not specified, port 22 by default.)
-	  -U <user>  Drop privileges by switching to user, when the command is
-	             run as a privileged user in conjunction with the -n option.
-	             Standard MAC-Telnet is not compatible with this option.
-	  -v         Print version and exit.
-	  -h         Print help and exit.
+    $ mactelnetd -h
+    
+    Usage: mactelnetd [-v] [-h] [-n] [-f] [-S] [-P <port>] [-U <user>]
+    
+    Parameters:
+      -f         Run process in foreground.
+      -n         Do not use broadcast packets. Just a tad less insecure.
+      -S / -F    Forwarding of TCP connections through  MAC-Telnet protocol,
+                 instead of using the standard MAC-Telnet remote terminal.
+      -P <port>  Local TCP port used for forwarding connections to SSH Server.
+                 (If not specified, port 22 by default.)
+      -U <user>  Drop privileges by switching to user, when the command is
+                 run as a privileged user in conjunction with the -n option.
+                 Standard MAC-Telnet is not compatible with this option.
+      -v         Print version and exit.
+      -h         Print help and exit.
 
 
 #### Examples ####
 
 Launch MAC-Telnet Daemon for receiving Standard MAC-Telnet protocol connections:
 
-	# mactelnetd
+    # mactelnetd
 
 Launch MAC-Telnet Daemon for forwarding connections to local SSH Daemon listening 
 on port 22:
 
-	$ mactelnetd -S
-	
+    $ mactelnetd -S
+    
 Launch MAC-Telnet Daemon for forwarding connections to local SSH Daemon listening
 on non-standard port 2222:
 
-	$ mactelnetd -S -p 2222
+    $ mactelnetd -S -p 2222
 
 
 ### macping ###
 
 #### Usage ####
 
-	$ macping -h
-	
-	Usage: macping <MAC> [-h] [-f] [-c <count>] [-s <packet size>]
-	
-	Parameters:
-	  MAC       MAC-Address of the RouterOS/mactelnetd device.
-	  -f        Fast mode, do not wait before sending next ping request.
-	  -s        Specify size of ping packet.
-	  -c        Number of packets to send. (0 = unlimited)
-	  -h        This help.
+    $ macping -h
+    
+    Usage: macping <MAC> [-h] [-f] [-c <count>] [-s <packet size>]
+    
+    Parameters:
+      MAC       MAC-Address of the RouterOS/mactelnetd device.
+      -f        Fast mode, do not wait before sending next ping request.
+      -s        Specify size of ping packet.
+      -c        Number of packets to send. (0 = unlimited)
+      -h        This help.
 
 
 #### Examples ####
 
-	$ macping aa:bb:cc:dd:ee:ff
-	
+    $ macping aa:bb:cc:dd:ee:ff
+    
 
 ### mndp ###
 
 #### Usage ####
-	
-	Usage: mndp
+    
+    Usage: mndp
 
 
 #### Examples ####
 
-	$ mndp
+    $ mndp
 
 
 Troubleshooting

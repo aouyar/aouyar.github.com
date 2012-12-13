@@ -30,7 +30,7 @@ hnav:
 munin_plugin_graphs:
     - wanpipe_traffic
     - wanpipe_errors
-    - wanpipe_pri_errors	
+    - wanpipe_pri_errors    
     - wanpipe_pri_rxlevel
 
 munin_plugin_vars:

@@ -30,7 +30,7 @@ hnav:
     - Development
     - Credits
     - License
-	
+    
 ---
 
 Updates
@@ -53,10 +53,10 @@ cycle significantly. More information on _Multigraph Plugins_ can be found in th
 * [Multigraph Plugins] (http://munin-monitoring.org/wiki/MultigraphSampleOutput)
 * [Multigraph Plugin Protocol] (http://munin-monitoring.org/wiki/protocol-multigraph)
 
-	    
+        
 _PyMunin_ has been developed for implementing _Multigraph Plugins_ using 
 _Python_, but simple single graph plugins are also supported.
-		
+        
 The code for retrieval of data is totally separated from _Munin_ specific code. 
 The modules for data retrieval in _pysysinfo_ can be used independently of 
 _Munin_ in other monitoring solutions.
@@ -66,7 +66,7 @@ _Munin_ in other monitoring solutions.
 
 Plugins
 -------
-	    
+        
 _PyMunin_ has been used in developing many _Multigraph Munin Plugins_. 
 The following is a list of plugins that are included the base distribution of 
 _PyMunin_:
@@ -127,7 +127,7 @@ contact me directly for assistance.
 
 Installation
 ------------
-	    
+        
 ### Binary Packages ###
 
 _PyMunin_ is included in the latest versions of _Fedora Linux_, aand starting 
@@ -145,11 +145,11 @@ yum install PyMunin
 
 
 ### Source Packages ###
-	    
+        
 #### Automated Installation ####
-	    
+        
 {% include install_pip.inc %}
-					
+                    
 This will install _pymunin_ and _pysysinfo_ in <i>Python</i> site packages.
 The plugins will be unpacked as console scripts into the install _bin_ directory. 
 Each of the scripts will be prefixed with _pymunin-_ (ex. _pymunin-apachestats_ ) 
@@ -248,7 +248,7 @@ _--pidebug_ option to enable plugin debugging.
 
 
 
-		
+        
 
 Collaboration
 -------------
@@ -278,10 +278,10 @@ The plugins consist of the following components:
 
 * The _pymunin_ module ( _plugins/pymunin_ ) implements the base classes for 
 developing Munin plugins.
-	* Munin Plugins can be created by subclassing the _MuninPlugin_ class.
-	* Each plugin contains one or more graphs implemented by _MuninGraph_ class 
-	  instances.
-	* The _muninMain_ function implements the entry point for _Munin Plugins_.
+    * Munin Plugins can be created by subclassing the _MuninPlugin_ class.
+    * Each plugin contains one or more graphs implemented by _MuninGraph_ class 
+      instances.
+    * The _muninMain_ function implements the entry point for _Munin Plugins_.
 * The plugin logic is implemented in the plugin scripts in _pymunin/plugins_.
 * The actual data retrieval logic is separated from the plugins to facilitate 
   code reuse. Individual modules in the directory _pysysinfo_ implement classes 

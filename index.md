@@ -56,8 +56,8 @@ projects:
                 tunneling SSH protocol instead of implementing shell interface 
                 directly. Use cases include initial provisioning of servers and 
                 embedded systems and recovery from IP Stack configuration errors.
-      prjpage: True
-	
+      prjpage: true
+
 ---
 
 
