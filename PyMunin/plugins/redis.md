@@ -31,6 +31,12 @@ munin_plugin_graphs:
     - redis_keys_expired
     - redis_keys_evicted
     - redis_subscriptions
+    - redis_rdb_changes
+    - redis_rdb_dumptime
+    - redis_aof_filesize
+    - redis_aof_bufflen
+    - redis_aof_rewrite_bufflen
+    - redis_aof_rewritetime
 
 munin_plugin_vars:
     - name: host
