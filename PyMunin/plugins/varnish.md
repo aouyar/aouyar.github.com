@@ -23,13 +23,15 @@ hnav:
     - License
                    
 munin_plugin_graphs:
+    - varnish_requests
+    - varnish_hits
     - varnish_client_conn
-    - varnish_client_requests
     - varnish_backend_conn
-    - varnish_backend_requests
     - varnish_traffic
     - varnish_workers
-    - varnish_hits
+    - varnish_work_queue
+    - varnish_memory
+    - varnish_expire_purge
 
 munin_plugin_vars:
     - name: instance 
