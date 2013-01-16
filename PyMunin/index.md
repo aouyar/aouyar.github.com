@@ -329,16 +329,21 @@ Credits
 Some of the people that have knowingly or unknowingly contributed to the 
 development are:
 
-* Initial packaging of the code was done by [mlavin] (https://github.com/mlavin) 
-  (Mark Lavin). _PyMunin_ is installable _pip_ or _easy_install_ thanks to Mark. :-)
+* Initial packaging of the code was done by 
+  [Mark Lavin](https://github.com/mlavin). _PyMunin_ is installable using _pip_ 
+  or _easy_install_ thanks to Mark. :-)
 * _PyMunin_ has been packaged for _Fedora_ and _Red Hat Enterprise Linux_ by 
   [Matthias Runge](www.matthias-runge.de).
 * The initial design of the solution was inspired 
   by [python-munin](https://github.com/samuel/python-munin) 
-  by [samuel](https://github.com/samuel) (Samuel Stauffer).
+  by [Samuel Stauffer](https://github.com/samuel).
 * The Rackspace Cloud plugin was initially developed
-  by [palewire](https://github.com/palewire) (Brian Welsh)
-  and it is the first plugin that has been contributed to the project. 
+  by [Brian Welsh](https://github.com/palewire).
+  and it is the first plugin that has been contributed to the project.
+* [Santiago Rojo](https://github.com/arpagon) has contributed
+many improvements to the Asterisk Plugin.
+* [Preston Mason](https://github.com/pentie) has made significant contributions to 
+the Varnish Cache and PHP APC Cache Plugins. 
 * Many plugins were inspired by existing _Munin Plugins_developed by other 
   people. (Before developing any plugins, I always try to check existing 
   solutions.)

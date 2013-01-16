@@ -23,6 +23,9 @@ additional graphs were implemented. The complete list of graphs is as follows:
 * varnish_memory
 * varnish_expire_purge
 
+Many of the improvements were based on the fork 
+by [Preston Mason](https://github.com/pentie).
+
 You can check the [Plugin Documentation](/PyMunin/plugins/varnish.html) for more
 information on the plugin.
 
