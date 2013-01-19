@@ -23,26 +23,6 @@ projects:
                 Memory Utilization, Disk Usage, Disk I/O, Network Interfaces, 
                 Network Connections, Processes and Threads, etc.
       prjpage: true
-    - name: pybackup
-      shortdesc: Python Module for Implementing Backup Scripts
-      longdesc: |
-                Backups scripts in _Python_, being developed as an alternative 
-                to backup task specific custom shell scripts.
-                Backup jobs are defined in a configuration file and different 
-                backup methods are implemented by plugins, that improve on error 
-                checking and reporting.
-      prjpage: true
-    - name: pg_manage
-      shortdesc: Backup / Recovery Scripts for PostgreSQL Database
-      longdesc: |
-                Scripts for automating automating backup and recovery tasks for 
-                PostgreSQL Database Server. The following tasks are implemented: 
-                sending archive logs to backup server, retrieval of archive logs 
-                from backup server, initialization of database, generation of 
-                hot backups with archive logging, recovery from hot backup, dump
-                (export) and restore (import) of databases and initial 
-                synchronization of database servers for setting up replication.
-      prjpage: true
     - name: MAC-Telnet
       shortdesc: Telnet / SSH via MAC Address (Client and Server)
       longdesc: |
@@ -56,6 +36,35 @@ projects:
                 tunneling SSH protocol instead of implementing shell interface 
                 directly. Use cases include initial provisioning of servers and 
                 embedded systems and recovery from IP Stack configuration errors.
+      prjpage: true
+    - name: healthgraph-api
+      shortdesc: Python Client Library for Health Graph API
+      longdesc: |
+                The Python Client Library for 
+                [Health Graph API](http://developer.runkeeper.com/healthgraph). 
+                can be used for accessing [RunKeeper](http://runkeeper.com) for 
+                retrieving, updating, deleting and uploading Fitness Activity 
+                and Health Measurement Information.
+      prjpage: true
+    - name: pg_manage
+      shortdesc: Backup / Recovery Scripts for PostgreSQL Database
+      longdesc: |
+                Scripts for automating automating backup and recovery tasks for 
+                PostgreSQL Database Server. The following tasks are implemented: 
+                sending archive logs to backup server, retrieval of archive logs 
+                from backup server, initialization of database, generation of 
+                hot backups with archive logging, recovery from hot backup, dump
+                (export) and restore (import) of databases and initial 
+                synchronization of database servers for setting up replication.
+      prjpage: true
+    - name: pybackup
+      shortdesc: Python Module for Implementing Backup Scripts
+      longdesc: |
+                Backups scripts in _Python_, being developed as an alternative 
+                to backup task specific custom shell scripts.
+                Backup jobs are defined in a configuration file and different 
+                backup methods are implemented by plugins, that improve on error 
+                checking and reporting.
       prjpage: true
 
 ---
