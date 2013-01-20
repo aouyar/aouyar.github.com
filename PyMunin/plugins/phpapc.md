@@ -31,6 +31,9 @@ munin_plugin_graphs:
    - php_apc_reqs_filecache
    - php_apc_reqs_usercache
    - php_apc_expunge
+   - php_apc_fragment_ratio
+   - php_apc_fragment_count
+   - php_apc_fragment_avgsize
 
 munin_plugin_vars:
     - name: host
