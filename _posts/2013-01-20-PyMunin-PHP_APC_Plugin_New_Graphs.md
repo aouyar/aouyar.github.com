@@ -12,10 +12,10 @@ nopage: false
 ---
 
 The APC PHP Cache Plugin was updated to add the following graphs for monitoring 
-fragmentation of memory.: 
-   * php_apc_fragment_ratio
-   * php_apc_fragment_count
-   * php_apc_fragment_avgsize
+fragmentation of memory:
+ * php_apc_fragment_ratio
+ * php_apc_fragment_count
+ * php_apc_fragment_avgsize
 
 A new version of PyMunin has been uploaded to 
 [PyPI](http://pypi.python.org/pypi/PyMunin/). You can check the 
