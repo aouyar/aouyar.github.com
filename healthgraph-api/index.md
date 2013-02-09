@@ -93,7 +93,7 @@ file for the sample application: *runkeeper_demo.conf*
 
 The application can be run by executing:
 
-	python runkeeper_demo.conf
+	python runkeeper_demo.py -c runkeeper_demo.conf
 	
 The web interface could be reached at _localhost_ port _8000_ by default:
 [http://127.0.0.1:8000](http://127.0.0.1:8000)
