@@ -48,11 +48,11 @@ execution of a script for data retrieval for each graph. _Multigraph_ plugins
 permit the retrieval of data for multiple graphs in one execution run 
 (one-plugin many-graphs), reducing the processing time and delay for the fetch 
 cycle significantly. More information on _Multigraph Plugins_ can be found in the 
-[Munin Wiki](http://munin-monitoring.org/wiki/):
+[Munin Wiki](http://munin-monitoring.org/wiki/) at the 
+[Munin Project Website](http://munin-monitoring.org/):
 
 * [Multigraph Plugins] (http://munin-monitoring.org/wiki/MultigraphSampleOutput)
 * [Multigraph Plugin Protocol] (http://munin-monitoring.org/wiki/protocol-multigraph)
-
         
 _PyMunin_ has been developed for implementing _Multigraph Plugins_ using 
 _Python_, but simple single graph plugins are also supported.
@@ -60,6 +60,13 @@ _Python_, but simple single graph plugins are also supported.
 The code for retrieval of data is totally separated from _Munin_ specific code. 
 The modules for data retrieval in _pysysinfo_ can be used independently of 
 _Munin_ in other monitoring solutions.
+
+The authoritative source for information on Munin and Munin Plugins is the
+[Munin Wiki](http://munin-monitoring.org/wiki/) at the 
+[Munin Project Website](http://munin-monitoring.org/).
+You can also check [Instant Munin Plugin Starter](http://link.packtpub.com/c2VNS8)
+book from [Packt Publishing](http://www.packtpub.com/) for a step-by-step introduction 
+to Munin.
 
 {% include prj_link_home.inc %}
 
