@@ -347,7 +347,7 @@ development are:
 * The Rackspace Cloud plugin was initially developed
   by [Brian Welsh](https://github.com/palewire).
   and it is the first plugin that has been contributed to the project.
-* [Santiago Rojo](https://github.com/arpagon) has contributed
+* [Sebastian Rojo](https://github.com/arpagon) has contributed
 many improvements to the Asterisk Plugin.
 * [Preston Mason](https://github.com/pentie) has made significant contributions to 
 the Varnish Cache and PHP APC Cache Plugins. 
